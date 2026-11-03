@@ -9,11 +9,12 @@ for f in glob.glob(os.path.join(R,'assets','clip_*.json')):
 def heur_lines(p):
     p=re.sub(r'\s*\[(Verse|Chorus|Bridge|Outro|Intro|Pre-Chorus|Hook|Refrain|Interlude|Instrumental)[^\]]*\]\s*',lambda m:'\n\n'+m.group(0).strip()+'\n',p)
     p=re.sub(r'(?<=[a-z\.,;:!?\'"”’)])(?=[A-Z"“])',"\n",p); return p.strip()
+DISP=json.load(open(os.path.join(R,'assets','display.json')))
 tracks=[]
 for i,k in enumerate(ORDER,1):
     c=clips[k]; md=c['metadata']; p=md.get('prompt') or ''
     lyr=p if '\n' in p else heur_lines(p)
-    tracks.append({'n':i,'id8':k,'title':c['title'].strip(),'dur':round(md.get('duration') or 0),'style':md.get('tags',''),
+    d=DISP.get(k,{}); tracks.append({'n':i,'id8':k,'title':d.get('name') or c['title'].strip(),'sub':d.get('sub',''),'line':d.get('line',''),'suno_title':c['title'].strip(),'dur':round(md.get('duration') or 0),
       'audio':'audio/%s.m4a'%k if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '', 'art':'art/%s.jpeg'%k if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
       'suno':'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in p else 'lines approximate','made':c['created_at'][:10],'model':c.get('major_model_version','')})
 data={'built':datetime.date.today().isoformat(),'tracks':tracks}

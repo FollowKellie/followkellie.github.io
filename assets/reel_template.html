@@ -35,7 +35,7 @@ main{max-width:860px;margin:0 auto;padding:10px 16px 0}
 .card img{width:150px;height:150px;border-radius:14px;object-fit:cover;background:var(--sky)}
 .kicker{color:var(--gold2);font-size:.72em;letter-spacing:.08em;text-transform:uppercase;margin:0 0 2px}
 .card h2{font:500 1.5em/1.15 var(--display);margin:0 0 6px}
-.style{font-size:.72em;color:var(--soft);margin:0 0 10px}
+.subt{font-size:.85em;color:var(--soft);margin:-2px 0 6px;font-style:italic}.line{font-size:.9em;margin:0 0 12px;max-width:40ch}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .play{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;font-size:.85em}
 .play.now{background:var(--gold);color:#fff;border-color:var(--gold)}
@@ -50,7 +50,7 @@ main{max-width:860px;margin:0 auto;padding:10px 16px 0}
 #player audio{width:100%;max-width:640px;display:block;margin-top:4px}
 #player .pbtns{display:flex;gap:6px}#player .pbtns button{min-height:36px;padding:4px 10px;font-size:.9em}
 footer{max-width:860px;margin:60px auto 0;padding:0 16px;color:var(--soft);font-size:.7em}
-@media(max-width:620px){.card{grid-template-columns:1fr}.card img{width:96px;height:96px}#player{grid-template-columns:48px 1fr}#player img{width:48px;height:48px}}
+@media(max-width:620px){.keys{display:none}.card{grid-template-columns:1fr}.card img{width:96px;height:96px}#player{grid-template-columns:48px 1fr}#player img{width:48px;height:48px}}
 </style>
 </head>
 <body>
@@ -77,7 +77,7 @@ If you want one track, start with Wisdom vs. Trauma. If you want one sentence, h
  <label>Voice <select id="voice" aria-label="Reading voice"></select></label>
  <label>Speed <select id="rate"><option value="0.85">slower</option><option value="1" selected>normal</option><option value="1.15">brisk</option></select></label>
  <button id="stopRead">■ Stop reading</button>
- <span class="note">Keys: Space play/pause · ← → previous/next · Esc stop reading</span>
+ <span class="note keys">Keys: Space play/pause · ← → previous/next · Esc stop reading</span>
 </div>
 <main id="main"></main>
 <footer><p>Songs by ai.ie, made on Suno. Finished with the Shine kit "space time, voice held": breathing bass, nothing above it touched. Reel built {{BUILT}}.</p></footer>
@@ -94,7 +94,7 @@ const CONTACT='follow.ai.ie@gmail.com';  // put an email address here (mailto:) 
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const mmss=s=>s?Math.floor(s/60)+':'+String(s%60).padStart(2,'0'):'';
 let QI=-1;
-$('#main').innerHTML=D.tracks.map(t=>`<article class="card" id="t${t.n}" tabindex="0" data-n="${t.n}"><img src="${esc(t.art)}" alt="" loading="lazy"><div class="body"><p class="kicker">${String(t.n).padStart(2,'0')} · ${mmss(t.dur)}</p><h2>${esc(t.title)}</h2><p class="style">${esc(t.style)}</p><div class="row"><button class="play" data-n="${t.n}" aria-label="Play ${esc(t.title)}">▶ Play</button><a href="${t.suno}" target="_blank" rel="noopener" class="note">On Suno ↗</a>${t.audio?`<a href="${t.audio}" download="${esc(t.title)}.m4a" class="note">⬇ Download</a>`:''}</div><div class="block"><div class="bar"><b>Lyrics</b><button class="toggle" aria-expanded="false">Show</button><button class="read">🔊 Read aloud</button></div><div class="text">${esc(t.lyrics)}</div>${t.lnote?'<p class="note">Line breaks approximate.</p>':''}</div></div></article>`).join('');
+$('#main').innerHTML=D.tracks.map(t=>`<article class="card" id="t${t.n}" tabindex="0" data-n="${t.n}"><img src="${esc(t.art)}" alt="" loading="lazy"><div class="body"><p class="kicker">${String(t.n).padStart(2,'0')} · ${mmss(t.dur)}</p><h2>${esc(t.title)}</h2>${t.sub?`<p class="subt">${esc(t.sub)}</p>`:''}${t.line?`<p class="line">${esc(t.line)}</p>`:''}<div class="row"><button class="play" data-n="${t.n}" aria-label="Play ${esc(t.title)}">▶ Play</button><a href="${t.suno}" target="_blank" rel="noopener" class="note">On Suno ↗</a>${t.audio?`<a href="${t.audio}" download="${esc(t.title)}.m4a" class="note">⬇ Download</a>`:''}</div><div class="block"><div class="bar"><b>Lyrics</b><button class="toggle" aria-expanded="false">Show</button><button class="read">🔊 Read aloud</button></div><div class="text">${esc(t.lyrics)}</div>${t.lnote?'<p class="note">Line breaks approximate.</p>':''}</div></div></article>`).join('');
 function play(n){const t=D.tracks[n-1]; if(!t||!t.audio) return; QI=n-1; const a=$('#audio'); a.src=encodeURI(t.audio); a.play().catch(()=>{});
   $('#player').hidden=false; $('#pArt').src=t.art; $('#pTitle').textContent=t.title; $('#pSuno').href=t.suno;
   document.querySelectorAll('.play.now,.card.now').forEach(e=>e.classList.remove('now')); const b=document.querySelector(`.play[data-n="${n}"]`); b.classList.add('now'); b.closest('.card').classList.add('now')}
