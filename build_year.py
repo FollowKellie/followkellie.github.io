@@ -10,7 +10,10 @@ def heur_lines(p):
 tracks=[]
 for i,p in enumerate(picks,1):
     c=json.load(open(os.path.join(R,'assets',f"clip_{p['id']}.json"))); md=c['metadata']; k=p['id'][:8]
-    lyr=md.get('prompt') or ''; lyr=lyr if '\n' in lyr else heur_lines(lyr)
+    lyr=md.get('prompt') or ''
+    # strip pasted editor chatter from a lyric box (display only; Suno's box is untouched)
+    lyr='\n'.join(l for l in lyr.split('\n') if not re.search(r'Here are your lyrics|minimally edited|^\[Of course|^---\s*$',l))
+    lyr=lyr if '\n' in lyr else heur_lines(lyr)
     y,m=p['month'].split('-')
     tracks.append({'n':i,'id8':k,'title':p['name'],'sub':f"{MON[m]} {y}",'line':p.get('line',''),'dur':round(md.get('duration') or 0),
       'audio':f'../audio/{k}.m4a' if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '','art':f'../art/{k}.jpeg' if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
