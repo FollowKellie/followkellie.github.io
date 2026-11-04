@@ -2,7 +2,7 @@
 # Builds reel/index.html from assets/clip_*.json + audio/<id8>.m4a + art/<id8>.jpeg. Re-run: python3 -I build_reel.py
 import json,glob,os,re,datetime,html
 R=os.path.dirname(os.path.abspath(__file__))
-ORDER=['92ec3e22','30756649','efded082','d6d22402','09dda961','56a0726d','1dfe8e13','3c19a361']
+ORDER=['240b6424','cf3657a5','1dfe8e13','efded082','92ec3e22','d6d22402','56a0726d','018b56a8']  # The First Weeks, in order made (2026-11-03)
 clips={}
 for f in glob.glob(os.path.join(R,'assets','clip_*.json')):
     c=json.load(open(f)); clips[c['id'][:8]]=c
