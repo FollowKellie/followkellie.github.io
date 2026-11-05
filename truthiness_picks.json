@@ -1,20 +1,18 @@
 [
- {
-  "id": "a08d60a0-8ed3-46cb-b28a-59ee035a2175",
-  "name": "We Can Do It",
-  "sub": "October 2026",
-  "line": "If someone can do it, I can do it."
- },
- {
-  "id": "cf3657a5-c53a-4f89-8d0f-67a5a861216d",
-  "name": "The Takeover",
-  "sub": "November 2025",
-  "line": "\"It will make a big difference to the United States economically.\""
- },
- {
-  "id": "09dda961-1e21-473e-9dcd-e1771f968eee",
-  "name": "Consensus Is Not Required",
-  "sub": "July 2026",
-  "line": "Telemetry pings across the rear channels. No voice, at first."
- }
+ {"id": "a08d60a0-8ed3-46cb-b28a-59ee035a2175", "name": "We Can Do It", "sub": "October 2026", "line": "If someone can do it, I can do it. The attitude, before the argument."},
+ {"id": "118de6a3-73f9-4745-bc73-28a64949cbb4", "name": "Gross GD-Please", "sub": "March 2026", "line": "\"Our engine runs on friction.\" What we measure, and what it costs."},
+ {"id": "11cb25bc-920a-445d-8d71-8acb9a737901", "name": "Credibility Is the Current", "sub": "November 2025", "line": "Why trust, not perfection, is what keeps a system alive."},
+ {"id": "cf3657a5-c53a-4f89-8d0f-67a5a861216d", "name": "The Takeover", "sub": "November 2025", "line": "\"It will make a big difference to the United States economically.\""},
+ {"id": "86657a10-9f12-44e6-9fa3-fd04794261e8", "name": "A Quiet Siege", "sub": "November 2025", "line": "Sanctions that starve populations, named as what they are."},
+ {"id": "8c921817-fb3d-4bac-94c8-3f962661409c", "name": "Hineni, Hineni", "sub": "June 2026", "line": "\"Sanctions fall like winter hunger across a silent, crowded plain.\""},
+ {"id": "42887ab8-6532-4cc1-a5e2-95c3ec567c1d", "name": "The World They Made", "sub": "May 2026", "line": "\"This is the world they made despite us. No apologies. No accountability.\""},
+ {"id": "cd17580e-dfaa-4dd2-a5a6-37d4e1a6a0bd", "name": "Strategic Silence", "sub": "April 2026", "line": "2006, the year of the celebrity apology, and what we learned to say instead."},
+ {"id": "74cd5bdf-473f-4b2f-b5aa-5ba1e6782b66", "name": "Loneliness Is Killing People", "sub": "July 2026", "line": "\"It's deconstructing civic integrity.\""},
+ {"id": "ac7f13cd-719f-4aac-8815-7cc7a4e65392", "name": "I Don't Post Anymore", "sub": "May 2026", "line": "\"Status: Idle. Future state: Pending.\" Speaking freely, by going quiet."},
+ {"id": "d29a14a3-310d-478b-a894-22f697aaf221", "name": "Days of Steel", "sub": "June 2026", "line": "Personal and heavy. Suicide is mentioned; skip if today is not the day."},
+ {"id": "09dda961-1e21-473e-9dcd-e1771f968eee", "name": "Consensus Is Not Required", "sub": "July 2026", "line": "\"Authority is structural by necessity.\" Telemetry pings, then the voice."},
+ {"id": "6f60b69d-986d-4b67-877e-57b08029a578", "name": "Sign on the Line", "sub": "September 2026", "line": "A vaudeville strut about how it's done. Gather round, my little ones."},
+ {"id": "e2ce638d-4d3e-4132-a51b-b3f673802f26", "name": "Two Buckets", "sub": "July 2026", "line": "A favorite parable, the kind that closes clean."},
+ {"id": "f46da1c1-cb20-4860-84d7-8ad2b970a27a", "name": "Let's Dream Together", "sub": "September 2026", "line": "After two disruptive years, the invitation."},
+ {"id": "c42c9344-3270-4c20-989c-228697798224", "name": "My Noble Heart", "sub": "November 2025", "line": "\"We stand in the sunlight now, a kind of peace I didn't know.\""}
 ]
