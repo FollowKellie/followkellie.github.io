@@ -14,7 +14,7 @@ for i,p in enumerate(picks,1):
     lyr=lyr if '\n' in lyr else heur_lines(lyr)
     tracks.append({'n':i,'id8':k,'title':p['name'],'sub':p.get('sub',''),'line':p.get('line',''),'dur':round(md.get('duration') or 0),
       'audio':f'../audio/{k}.m4a' if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '','art':f'../art/{k}.jpeg' if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
-      'suno':'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in (md.get('prompt') or '') else 'lines approximate','made':c['created_at'][:10]})
+      'suno':p.get('share') or 'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in (md.get('prompt') or '') else 'lines approximate','made':c['created_at'][:10]})
 data={'built':datetime.date.today().isoformat(),'tracks':tracks}
 t=open(os.path.join(R,'assets','reel_template.html'),encoding='utf-8').read()
 t=t.replace('<title>ai.ie · a reel</title>','<title>ai.ie · Truthiness and Other Facts</title>')
