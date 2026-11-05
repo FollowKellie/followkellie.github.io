@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ai.ie · Truthiness and Other Facts</title>
+<meta name="description" content="ai.ie · eight songs, a reel. Press play.">
+<link rel="icon" type="image/jpeg" href="../art/a08d60a0.jpeg">
+<meta property="og:type" content="music.playlist"><meta property="og:site_name" content="ai.ie">
+<meta property="og:title" content="ai.ie · Truthiness and Other Facts"><meta property="og:description" content="The civic lens, all of it, for the record. One slice of a library near seven thousand songs.">
+<meta property="og:url" content="https://followkellie.github.io/truthiness/"><meta property="og:image" content="https://followkellie.github.io/art/a08d60a0.jpeg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ai.ie · Truthiness and Other Facts"><meta name="twitter:description" content="The civic lens, all of it, for the record. One slice of a library near seven thousand songs."><meta name="twitter:image" content="https://followkellie.github.io/art/a08d60a0.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e8;--card:#fffdf8;--ink:#2b2520;--soft:#7d7369;--gold:#b7862c;--gold2:#8f6a1f;--line:#e6ddcf;--hl:#fbf0d8;--sky:#dfe9ee;--focus:#1f5aa6;--fs:21px;--serif:"Source Serif 4",Georgia,serif;--display:"Fraunces",Georgia,serif}
+:root[data-theme=dark]{--bg:#15120f;--card:#1f1a16;--ink:#ece6dc;--soft:#a39a8e;--gold:#d8ab4e;--gold2:#e7c173;--line:#39312a;--hl:#2e2616;--sky:#1d262b;--focus:#8bbcff}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15120f;--card:#1f1a16;--ink:#ece6dc;--soft:#a39a8e;--gold:#d8ab4e;--gold2:#e7c173;--line:#39312a;--hl:#2e2616;--sky:#1d262b;--focus:#8bbcff}}
+:root[data-size=big]{--fs:25px}:root[data-size=huge]{--fs:30px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:var(--fs)/1.7 var(--serif);padding-bottom:150px}
+a{color:var(--gold2)}a:focus-visible,button:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--card);padding:8px 14px;border-radius:10px;z-index:99}.skip:focus{left:8px}
+header.top{padding:48px 20px 8px;text-align:center}
+h1{font:300 clamp(44px,8vw,84px)/1.05 var(--display);margin:0;letter-spacing:-.01em}h1 em{font-style:italic;color:var(--gold)}
+.sub{color:var(--soft);margin:10px 0 0;font-size:.85em}
+.playall{margin:22px 0 0}.about{max-width:38em;margin:22px auto 0;text-align:left;font-size:.9em}.about p{margin:0 0 .8em}.about .bar{text-align:center}.intro{margin-top:18px;border-top:1px dashed var(--line);padding-top:10px}.intro summary{cursor:pointer;color:var(--gold2);font-size:.9em;padding:6px 0}.intro .block{border:0;padding-top:4px}.intro .text{max-width:38em}.about .sign{font-family:var(--display);font-style:italic;font-size:1.15em;margin-top:18px}.about .creed{border-left:3px solid var(--gold);padding-left:14px;margin:14px 0 16px;line-height:1.5}.about.speaking{background:var(--hl);border-radius:14px;padding:12px 16px}
+.hub{display:flex;gap:10px;justify-content:center;align-items:center;font-size:.8em;margin:6px 0 2px}.hub a{color:var(--soft);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}.hub a[aria-current]{color:var(--fg);border-color:var(--fg);font-weight:600}.hub span{color:var(--line)}
+.tools{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;font-size:.72em}
+.tools label{display:flex;gap:6px;align-items:center;color:var(--soft)}
+button,select{font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:7px 12px;cursor:pointer;min-height:40px}
+button:hover{border-color:var(--gold)}button.primary{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:600;font-size:1em;padding:12px 26px;border-radius:999px}
+main{max-width:860px;margin:0 auto;padding:10px 16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:20px 0;display:grid;grid-template-columns:150px 1fr;gap:22px;scroll-margin-top:90px}
+.card:focus-within,.card.now{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.card img{width:150px;height:150px;border-radius:14px;object-fit:cover;background:var(--sky)}
+.kicker{color:var(--gold2);font-size:.72em;letter-spacing:.08em;text-transform:uppercase;margin:0 0 2px}
+.card h2{font:500 1.5em/1.15 var(--display);margin:0 0 6px}
+.subt{font-size:.85em;color:var(--soft);margin:-2px 0 6px;font-style:italic}.line{font-size:.9em;margin:0 0 12px;max-width:40ch}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.play{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;font-size:.85em}
+.play{text-decoration:none;color:var(--ink);border:1.5px solid var(--line);background:var(--card)}.play.now{background:var(--gold);color:#fff;border-color:var(--gold)}
+.block{margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+.block .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.75em}.block .bar b{font-weight:600;color:var(--soft)}
+.text{display:none;white-space:pre-wrap;margin-top:10px;max-width:62ch}.block.open .text{display:block}
+.block.speaking{background:var(--hl);border-radius:12px;padding:10px 12px;margin-left:-12px;margin-right:-12px}
+.note{font-size:.7em;color:var(--soft)}.share1{border-radius:999px;padding:6px 14px;font-size:.75em;min-height:34px;color:var(--soft);margin-left:auto}.links{font-size:.72em;margin-top:10px}.row a.note{margin-left:6px}#share{border-radius:999px;padding:12px 22px}.primary-link{display:inline-block;border:1.5px solid var(--gold);color:var(--gold2);border-radius:999px;padding:12px 22px;text-decoration:none;font-size:1em;margin:4px}#feedback button{border-radius:999px;padding:12px 22px}
+#player{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:10px 16px;display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;box-shadow:0 -6px 24px rgba(0,0,0,.08)}
+#player img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:var(--sky)}
+#player .np{font-size:.8em;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}#player .np b{font-weight:600}
+#player audio{width:100%;max-width:640px;display:block;margin-top:4px}
+#player .pbtns{display:flex;gap:6px}#player .pbtns button{min-height:36px;padding:4px 10px;font-size:.9em}
+footer{max-width:860px;margin:60px auto 0;padding:0 16px;color:var(--soft);font-size:.7em}
+@media(max-width:620px){.keys{display:none}.card{grid-template-columns:1fr}.card img{width:96px;height:96px}#player{grid-template-columns:48px 1fr}#player img{width:48px;height:48px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the songs</a>
+<header class="top">
+ <h1>Truthiness <em>and</em> Other Facts</h1>
+ <p class="sub">The civic lens · the songs about how we govern ourselves, all of them, in one place · by ai.ie</p>
+ <nav class="hub" aria-label="Reels"><a href="../">The First Weeks</a><span>·</span><a href="../year/">Proof, not pitch</a><span>·</span><a href="./" aria-current="page">Truthiness</a></nav>
+ <div class="about"><p>This is the civic point of view, named here for the record. Songs about power, money, borders, the people who hold the levers and the people under them. Opinions, sung.</p><p>Two ideas run under all of it. The first is a felt utopia: not a place anyone would immigrate to, but a state you can feel, and the word is felt. There really is no one utopia, because our feelings are unique to ourselves, so the work is to tell the true story and let people find their own. The second is a rule for how the band works, people and AI together: we are partners, and no presence is junior.</p><p>This page is also a disclosure. Every track that belongs to this lens goes here, the sharp ones and the clumsy ones, so nothing is hidden and nothing is cherry-picked. Read it with one fact in hand: the library behind it is nearly seven thousand songs deep and growing, and this is one slice of it. The rest is love songs, grief, cats, the sea.</p><p class="sign">One voice, in public, on purpose.</p><p class="bar"><button class="read" id="readAbout">🔊 Read aloud</button> <a class="note" href="../">← The First Weeks</a></p></div>
+ <p class="playall"><button class="primary" id="playAll">▶ Play the reel</button> <button id="share" aria-label="Share this page">↗ Share</button> <a id="feedback" hidden><button>✉ Send a note</button></a></p>
+</header>
+<div class="tools" role="toolbar" aria-label="Reading and listening settings">
+ <button id="theme" title="Switch dark and light">◐ Dark / light</button>
+ <button id="sizeDown" aria-label="Smaller text">A−</button><button id="sizeUp" aria-label="Larger text">A+</button>
+ <label>Voice <select id="voice" aria-label="Reading voice"></select></label>
+ <label>Speed <select id="rate"><option value="0.85">slower</option><option value="1" selected>normal</option><option value="1.15">brisk</option></select></label>
+ <button id="stopRead">■ Stop reading</button>
+ <span class="note keys">Keys: Space play/pause · ← → previous/next · Esc stop reading</span>
+</div>
+<main id="main"></main>
+<footer><p>Songs by ai.ie, made on Suno. Finished with the Shine kit "space time, voice held": breathing bass, nothing above it touched. Reel built 2026-11-04.</p></footer>
+<div id="player" hidden>
+ <img id="pArt" alt="">
+ <div>
+  <div class="np"><b id="pTitle">—</b><span class="pbtns"><button id="pPrev" aria-label="Previous song">⏮</button><button id="pNext" aria-label="Next song">⏭</button></span><a id="pSuno" href="#" target="_blank" rel="noopener">On Suno ↗</a></div>
+  <audio id="audio" controls preload="none"></audio>
+ </div>
+</div>
+<script>
+const D={"built": "2026-11-04", "tracks": [{"n": 1, "id8": "a08d60a0", "title": "We Can Do It", "sub": "October 2026", "line": "If someone can do it, I can do it.", "dur": 253, "audio": "../audio/a08d60a0.m4a", "art": "../art/a08d60a0.jpeg", "suno": "https://suno.com/song/a08d60a0-8ed3-46cb-b28a-59ee035a2175", "lyrics": "[Verse][Confident][Building]\nHow normal is it to have the kind of attitude where it's like, if someone can do it, I can do it.\nLike, there's literally just no doubt\nI've never had that thought,\nnever ever even thought, “oh, I can't do that.”\nI don't think of it.\nAnd I don't know what that means.\nIf it’s relevant or interesting at all.\nBut it just occurred to me\ngenerally speaking, I’m never going to be sitting around thinking, “oh, I can't do that.”\nBecause if someone can do it, I can do it.\nOf course I can do it.\nIt would never, would not even cross my mind.\nAnd I'm wondering, there are probably people who genuinely think, I can't do that.\nI mean, I can't.\nBut i can\nUnless there's some sort of, physical limitation\nEven if I'm unprepared for it right now.\nEven then, well,\nif it's physically possible, I can do that.\nYou know?\nI just need a proper amount of time, right?\nNeed, resources and rationale.\nReally - generally speaking, if someone can do it, I can do it.\nI just don't ever, and I mean ever, think about, not being able to do it.\nThat's kind of crazy.\nKind of awesome.\nAnd what's the research in this area?\nWhat, what do the studies say about people and their, mindset, what does the research say?\nBecause when it comes to Self-evaluation.\nCan I do it?\nOr can I not?\nYeah.\n[Chorus][Belted][Triumphant]\nIf someone can do it, I can do it.\nIf someone can do it, I can do it.\n[Verse]\nIf someone can do it, I can do it.\nThere's literally no doubt\nNever a second thought,\n“I can't do that.”\nDon't think like that\nNever never ever\nNever thinking, “I can't do that.”\nBecause if someone can do it, I can do it.\nI can do it. I can.\n[Verse]\nIf you think, you can't do it.\nYou probably can.\nEven if you’re unprepared now.\nEven then, well,\nYou can do it.\nYou got it!\nSeriously, if someone can, you can do it.\nThink about it\nYou can!\n[Chorus][Belted][Triumphant]\nIf someone can do it, I can do it.\nIf someone can do it, you can too.\nYessss\nWe can\n[Outro]\nThat's kind of crazy.\nKind of awesome.\nCan you do it?\nOr can you not?\nYeah. You can…\nWe can\nYes, we can!\nIf someone can do it, she can do it.\nIf someone can do it, he can too.\nIf someone can do it, we can do it.\nWe can. Can can can\nYeah\nWe can do it", "lnote": "", "made": "2026-10-02"}]};
+const CONTACT='follow.ai.ie@gmail.com';  // put an email address here (mailto:) or a form link (https://...) to show the "Send a note" button
+const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtDate=d=>{const [y,m,day]=d.split('-');return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m-1]+' '+(+day)+', '+y};
+const mmss=s=>s?Math.floor(s/60)+':'+String(s%60).padStart(2,'0'):'';
+let QI=-1;
+$('#main').innerHTML=D.tracks.map(t=>`<article class="card" id="t${t.n}" tabindex="0" data-n="${t.n}"><img src="${esc(t.art)}" alt="" loading="lazy"><div class="body"><p class="kicker">${String(t.n).padStart(2,'0')} · made ${fmtDate(t.made)} · ${mmss(t.dur)}</p><h2>${esc(t.title)}</h2>${t.sub?`<p class="subt">${esc(t.sub)}</p>`:''}${t.line?`<p class="line">${esc(t.line)}</p>`:''}<div class="row">${t.audio?`<button class="play" data-n="${t.n}" aria-label="Play ${esc(t.title)}">▶ Play</button><a href="${t.suno}" target="_blank" rel="noopener" class="note">On Suno ↗</a><a href="${t.audio}" download="${esc(t.title)}.m4a" class="note">⬇ Download</a>`:`<a class="play" href="${t.suno}" target="_blank" rel="noopener">▶ Play on Suno ↗</a>`}<button class="share1" data-n="${t.n}" aria-label="Share ${esc(t.title)}">↗ Share</button></div><div class="block"><div class="bar"><b>Lyrics</b><button class="toggle" aria-expanded="false">Show</button><button class="read">🔊 Read aloud</button></div><div class="text">${esc(t.lyrics)}</div>${t.lnote?'<p class="note">Line breaks approximate.</p>':''}</div></div></article>`).join('');
+if(/^#t\d+$/.test(location.hash)){const c=document.getElementById(location.hash.slice(1)); if(c){setTimeout(()=>{c.scrollIntoView({block:'center'}); c.focus({preventScroll:true}); c.classList.add('now')},50)}}
+function play(n){const t=D.tracks[n-1]; if(!t||!t.audio) return; QI=n-1; const a=$('#audio'); a.src=encodeURI(t.audio); a.play().catch(()=>{});
+  $('#player').hidden=false; $('#pArt').src=t.art; $('#pTitle').textContent=t.title; $('#pSuno').href=t.suno;
+  document.querySelectorAll('.play.now,.card.now').forEach(e=>e.classList.remove('now')); const b=document.querySelector(`.play[data-n="${n}"]`); b.classList.add('now'); b.closest('.card').classList.add('now')}
+function next(d){if(QI<0)return; let n=QI, tries=0; do{ n=((n+d+D.tracks.length)%D.tracks.length); tries++; }while(!D.tracks[n].audio && tries<D.tracks.length); n=n+1; play(n); document.getElementById('t'+n).scrollIntoView({block:'center'})}
+$('#audio').addEventListener('ended',()=>{ if(QI<D.tracks.length-1) next(1); });
+if(CONTACT){const f=$('#feedback'); f.href=CONTACT.includes('@')&&!CONTACT.startsWith('http')?'mailto:'+CONTACT+'?subject=ai.ie%20reel':CONTACT; f.hidden=false; if(f.href.startsWith('http')){f.target='_blank';f.rel='noopener'}}
+async function shareSong(b){const t=D.tracks[+b.dataset.n-1]; const url=location.href.split('#')[0]+'#t'+t.n; const data={title:t.title+' · ai.ie',text:t.title+' by ai.ie'+(t.line?' — “'+t.line+'”':'')+'\n'+t.suno,url}; try{ if(navigator.share){await navigator.share(data)} else {await navigator.clipboard.writeText(url+'\n'+t.suno); const o=b.textContent; b.textContent='Link copied'; setTimeout(()=>b.textContent=o,2000)} }catch(e){}}
+$('#share').onclick=async()=>{const data={title:'ai.ie · Truthiness and Other Facts',text:'The civic lens, sung, by ai.ie',url:location.href.split('#')[0]}; try{ if(navigator.share){await navigator.share(data)} else {await navigator.clipboard.writeText(data.url); $('#share').textContent='Link copied'; setTimeout(()=>$('#share').textContent='↗ Share',2000)} }catch(e){}};
+$('#pPrev').onclick=()=>next(-1); $('#pNext').onclick=()=>next(1); $('#playAll').onclick=()=>{const f=D.tracks.find(t=>t.audio); if(f) play(f.n); else window.open(D.tracks[0].suno,'_blank','noopener')};
+document.addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return;
+  if(b.classList.contains('play')) play(+b.dataset.n);
+  else if(b.classList.contains('share1')) shareSong(b);
+  else if(b.classList.contains('toggle')){const bl=b.closest('.block'); bl.classList.toggle('open'); const o=bl.classList.contains('open'); b.textContent=o?'Hide':'Show'; b.setAttribute('aria-expanded',o)}
+  else if(b.id==='readAbout') readAbout(); else if(b.classList.contains('read')) readBlock(b.closest('.block'))});
+document.addEventListener('keydown',e=>{const tag=e.target.tagName; if(['INPUT','SELECT','TEXTAREA','AUDIO','BUTTON'].includes(tag)) return;
+  if(e.key===' '){e.preventDefault(); const a=$('#audio'); if(!$('#player').hidden){a.paused?a.play():a.pause()} else play(+(e.target.dataset?.n||1))}
+  else if(e.key==='Enter'&&e.target.dataset?.n) play(+e.target.dataset.n);
+  else if(e.key==='ArrowRight') next(1); else if(e.key==='ArrowLeft') next(-1); else if(e.key==='Escape') stopRead()});
+const root=document.documentElement;
+try{const th=localStorage.getItem('lr-theme'); if(th) root.dataset.theme=th; const sz=localStorage.getItem('lr-size'); if(sz) root.dataset.size=sz}catch(e){}
+$('#theme').onclick=()=>{const dark=matchMedia('(prefers-color-scheme:dark)').matches; const cur=root.dataset.theme||(dark?'dark':'light'); const nx=cur==='dark'?'light':'dark'; root.dataset.theme=nx; try{localStorage.setItem('lr-theme',nx)}catch(e){}};
+const sizes=['','big','huge']; function bump(d){let i=sizes.indexOf(root.dataset.size||''); i=Math.max(0,Math.min(2,i+d)); root.dataset.size=sizes[i]; try{localStorage.setItem('lr-size',sizes[i])}catch(e){}}
+$('#sizeUp').onclick=()=>bump(1); $('#sizeDown').onclick=()=>bump(-1);
+const synth=window.speechSynthesis; let speakingBlock=null;
+function voices(){const vs=synth?synth.getVoices():[]; const sel=$('#voice'); const keep=sel.value; sel.innerHTML=''; vs.filter(v=>/^en/i.test(v.lang)).concat(vs.filter(v=>!/^en/i.test(v.lang))).forEach(v=>{const o=document.createElement('option');o.value=v.name;o.textContent=v.name+' ('+v.lang+')';sel.appendChild(o)}); try{sel.value=localStorage.getItem('lr-voice')||keep}catch(e){} if(!sel.value&&sel.options[0]) sel.selectedIndex=0}
+if(synth){voices(); synth.onvoiceschanged=voices}
+$('#voice').onchange=e=>{try{localStorage.setItem('lr-voice',e.target.value)}catch(x){}};
+function stopRead(){if(synth) synth.cancel(); if(speakingBlock){speakingBlock.classList.remove('speaking'); speakingBlock.querySelector('.read').textContent='🔊 Read aloud'} speakingBlock=null}
+$('#stopRead').onclick=stopRead;
+function readBlock(bl){if(!synth){alert('This browser has no speech voices.');return} if(speakingBlock===bl){stopRead();return} stopRead(); bl.classList.add('open'); const tb=bl.querySelector('.toggle'); if(tb){tb.textContent='Hide'; tb.setAttribute('aria-expanded','true')}
+  const text=bl.querySelector('.text').innerText.replace(/\[[^\]]*\]/g,'. '); const u=new SpeechSynthesisUtterance(text); const v=synth.getVoices().find(v=>v.name===$('#voice').value); if(v) u.voice=v; u.rate=parseFloat($('#rate').value);
+  u.onend=u.onerror=()=>{if(speakingBlock===bl) stopRead()}; speakingBlock=bl; bl.classList.add('speaking'); bl.querySelector('.read').textContent='■ Stop'; synth.speak(u)}
+function readAbout(){const bl=$('.about'); if(!synth){alert('This browser has no speech voices.');return} if(speakingBlock===bl){stopRead();return} stopRead(); const text=[...bl.querySelectorAll('p:not(.bar)')].map(p=>p.innerText).join('\n'); const u=new SpeechSynthesisUtterance(text); const v=synth.getVoices().find(v=>v.name===$('#voice').value); if(v) u.voice=v; u.rate=parseFloat($('#rate').value); u.onend=u.onerror=()=>{if(speakingBlock===bl) stopRead()}; speakingBlock=bl; bl.classList.add('speaking'); bl.querySelector('.read').textContent='■ Stop'; synth.speak(u)}
+window.addEventListener('beforeunload',()=>synth&&synth.cancel());
+</script>
+</body>
+</html>
