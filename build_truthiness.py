@@ -39,7 +39,8 @@ for i,p in enumerate(picks,1):
     pol=polished(k); lnote='' if '\n' in (md.get('prompt') or '') else 'Line breaks approximate.'
     if pol: lyr=pol; lnote='Text polished 2026-11-08; the take sings the original.'
     lyr=strip_cues(lyr)
-    tracks.append({'n':i,'id8':k,'title':p['name'],'sub':p.get('sub',''),'line':p.get('line',''),'dur':round(md.get('duration') or 0),
+    fore=open(os.path.join(R,p['fore']),encoding='utf-8').read().strip() if p.get('fore') else ''
+    tracks.append({'n':i,'id8':k,'title':p['name'],'sub':p.get('sub',''),'line':p.get('line',''),'fore':fore,'dur':round(md.get('duration') or 0),
       'audio':f'../audio/{k}.m4a' if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '','art':f'../art/{k}.jpeg' if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
       'suno':p.get('share') or 'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':lnote,'made':c['created_at'][:10]})
 data={'built':datetime.date.today().isoformat(),'tracks':tracks}
