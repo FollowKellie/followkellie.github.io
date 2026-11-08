@@ -39,3 +39,5 @@ Page: https://followkellie.github.io/truthiness/
 10. OPEN: one honesty line under the intro — will add with 9.
 11. OPEN: fresh library pull (publish flags and likes are stale since 11-04).
 Cathedral series: proposal written to ~/Documents/SunoArchive/naming/CATHEDRAL-SERIES_proposal_2026-11-08.md for her read-back; no renames run.
+
+- 2026-11-08 item 3 DONE on her ruling (via todo-review): A Quiet Siege swapped to 378fcc55 (synthwave, public), full audio with Shine; same lyric as before, polish file carried over. 18bfe2e7 is DISLIKED per her; the 11-04 likes data is stale (item 11). Old take 86657a10 stays published on Suno.
