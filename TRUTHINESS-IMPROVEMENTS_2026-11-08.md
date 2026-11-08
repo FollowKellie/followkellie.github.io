@@ -41,3 +41,4 @@ Page: https://followkellie.github.io/truthiness/
 Cathedral series: proposal written to ~/Documents/SunoArchive/naming/CATHEDRAL-SERIES_proposal_2026-11-08.md for her read-back; no renames run.
 
 - 2026-11-08 item 3 DONE on her ruling (via todo-review): A Quiet Siege swapped to 378fcc55 (synthwave, public), full audio with Shine; same lyric as before, polish file carried over. 18bfe2e7 is DISLIKED per her; the 11-04 likes data is stale (item 11). Old take 86657a10 stays published on Suno.
+- 2026-11-08 Second Dawn (track of record 9e563363, her link Y5GRMVV7wPy92zLx) replaces My Noble Heart c42c9344 as track 16; full audio with Shine; display fixes caries->carries, darker then->darker than (her sound-alike rule); family context kept off the page. Suno-side lyric text not edited from here.
