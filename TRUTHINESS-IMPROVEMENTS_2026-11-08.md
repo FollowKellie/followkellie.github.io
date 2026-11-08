@@ -3,7 +3,7 @@ Her ask, verbatim: "make a list with links as a task for improvements. and requi
 Page: https://followkellie.github.io/truthiness/
 
 ## REQUIRED
-1. Track 8 Loneliness Is Killing People: swap to her published pick once identified. Page take c30d26a7 https://suno.com/s/Gsa2bCkom767MU7g (ok, not her pick). Published "(original)", 36 plays, id to find in the Suno library. Her words: "has a better published version… I think the published one is Loneliness Is Killing People."
+1. Track 8: GO. Her word "Live this version: https://suno.com/s/U5AjJa1SwqgGPCVl" = "It Is Connection (acoustic, heartfelt campfire folk, take 2)", clip dc101da1-bd52-43ae-966d-38ee8e19aa7b. Replace c30d26a7 with it on the Truthiness page; family name is It Is Connection. Page take c30d26a7 https://suno.com/s/Gsa2bCkom767MU7g (ok, not her pick). Published "(original)", 36 plays, id to find in the Suno library. Her words: "has a better published version… I think the published one is Loneliness Is Killing People."
 2. Systemic Stupidity: current take "glitched in the growth rate. And not my favorite version." Newer takes made after 11-04 exist; refresh the family from Suno, pick a LIKED take, redraw the Systemic Stupidity / Gross GD-Please boundary by lyric text. Families: https://suno.com/album/ (ids in RENAME-MAP: Systemic Stupidity 2 takes; Gross GD-Please 15).
 3. Selection rule for every track: "I would prioritize ones that have been liked." Artwork is not a signal. Re-check all 15 picks against her likes; list any unliked pick for her.
 4. Track 1 We Can Do It stays exactly as is: "that one is as is on purpose." No polish, cues off the display only.
