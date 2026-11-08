@@ -23,6 +23,13 @@ def polished(k):
         if l.startswith('## '): break
         body.append(l)
     return '\n'.join(body).strip()
+def strip_cues(s):
+    # her ruling 2026-11-08 (relayed, likely): bracketed cues off the displayed lyric; parentheses kept (often sung)
+    s=re.sub(r'\[\[[^\]]*\]\]','',s)
+    s=re.sub(r'\[[^\]\n]*\]','',s)
+    s=re.sub(r'[ \t]+\n','\n',s)
+    s=re.sub(r'\n{3,}','\n\n',s)
+    return s.strip()
 tracks=[]
 for i,p in enumerate(picks,1):
     c=json.load(open(os.path.join(R,'assets',f"clip_{p['id']}.json"))); md=c['metadata']; k=p['id'][:8]
@@ -31,6 +38,7 @@ for i,p in enumerate(picks,1):
     lyr=lyr if '\n' in lyr else heur_lines(lyr)
     pol=polished(k); lnote='' if '\n' in (md.get('prompt') or '') else 'Line breaks approximate.'
     if pol: lyr=pol; lnote='Text polished 2026-11-08; the take sings the original.'
+    lyr=strip_cues(lyr)
     tracks.append({'n':i,'id8':k,'title':p['name'],'sub':p.get('sub',''),'line':p.get('line',''),'dur':round(md.get('duration') or 0),
       'audio':f'../audio/{k}.m4a' if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '','art':f'../art/{k}.jpeg' if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
       'suno':p.get('share') or 'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':lnote,'made':c['created_at'][:10]})
