@@ -54,3 +54,4 @@ after two lost voice takes. Stored as said; nothing repaired. Bricks marked in t
 - 2026-11-08 v3 effect sentence replaced with her wording.
 - 2026-11-08 v3 text added as a section for her to hear (PROPOSED, not live).
 - 2026-11-08 v1 written → her feedback → v2 written → review session proposed v3 (v2 minus ticket paragraphs) → this living doc created; v1, v2, feedback files consolidated here and trashed.
+- 2026-11-08 SHIPPED by the reel session on her word: the page copy is reel/polish/a08d60a0_we-can-do-it_FOREWORD_page-v1.html (a Foreword fold on track 1's card; page intro unchanged). Her corrections there: "communicated to those they affect" restored; "shows their map"; "argument in a chorus"; no quotation marks; new tax line. Word-checks closed. The page-v1 copy is now the live text; the PROPOSED v3 section above is superseded by it.
