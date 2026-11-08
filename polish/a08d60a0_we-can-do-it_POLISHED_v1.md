@@ -1,4 +1,4 @@
-# We Can Do It · lyric, polished v1 (text only; the recorded take still sings the original)
+# We Can Do It · lyric, polished v1 · HELD, NOT FOR THE PAGE (her ruling 2026-11-08: "Keep as sung"; the take sings the original, see AS-SUNG file). This sheet is the source for a future clean take, if she ever asks for one. Her word, same day: "that one is as is on purpose."
 
 Her ask 2026-11-08: "improve my rix for song" · "all my rix need polish" · "all on the page that is" · "remove you knows for example". Source: Suno clip a08d60a0 prompt (her voice memo, set 2026-10-02). Convention: stored clean, repairs named below. Nothing paraphrased; fillers and restarts removed, one word order fixed where the dictation doubled.
 

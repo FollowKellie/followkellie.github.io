@@ -207,8 +207,8 @@ In
 - "Tow the line" → "Toe the line" (1, spelling; Fable, on review)
 
 ## Left as is, flagged
+- "cashpers": HER COINAGE, not a slip. Her words 2026-11-08: "cashpers is my made up word for thoise you loan monety and then dissapear with it" (typed; sic). Keep everywhere; filed as a Kellieism candidate.
 - "Takes made - retribution for humanity": "Takes made" reads as a possible mishearing; kept.
-- "Capital cashpers / Don’t fuck with cashpers": "cashpers" is not a standard word; kept as voice or coinage.
 - "Really really (twice, lines 53 and 193)": doubled word, but it sits in a repeated refrain; kept as music.
 - "And and and. (lines 64, 92, 113)": doubled/tripled "and" recurs as a motif (also in tracks 11 and 13); kept.
 - "See see see / Again again.": doubled words that may be deliberate (see/scene wordplay); kept.
