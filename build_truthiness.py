@@ -6,15 +6,32 @@ picks=json.load(open(os.path.join(R,'truthiness_picks.json')))
 def heur_lines(p):
     p=re.sub(r'\s*\[(Verse|Chorus|Bridge|Outro|Intro|Pre-Chorus|Hook|Refrain|Interlude|Instrumental)[^\]]*\]\s*',lambda m:'\n\n'+m.group(0).strip()+'\n',p)
     return re.sub(r'(?<=[a-z\.,;:!?\'"”’)])(?=[A-Z"“])',"\n",p).strip()
+def polished(k):
+    import glob
+    fs=sorted(glob.glob(os.path.join(R,'polish',f'*{k}*_POLISHED_v1.md')))
+    if not fs: return None
+    lines=open(fs[0],encoding='utf-8').read().split('\n')
+    # skip the title line and the intro paragraph (up to the first blank line after it)
+    i=1
+    while i<len(lines) and not lines[i].strip(): i+=1   # blanks after the title
+    while i<len(lines) and lines[i].strip(): i+=1       # the intro paragraph
+    while i<len(lines) and not lines[i].strip(): i+=1   # blanks before the lyric
+    body=[]
+    for l in lines[i:]:
+        if l.startswith('## '): break
+        body.append(l)
+    return '\n'.join(body).strip()
 tracks=[]
 for i,p in enumerate(picks,1):
     c=json.load(open(os.path.join(R,'assets',f"clip_{p['id']}.json"))); md=c['metadata']; k=p['id'][:8]
     lyr=md.get('prompt') or ''
     lyr='\n'.join(l for l in lyr.split('\n') if not re.search(r'Here are your lyrics|minimally edited|^\[Of course|^---\s*$',l))
     lyr=lyr if '\n' in lyr else heur_lines(lyr)
+    pol=polished(k); lnote='' if '\n' in (md.get('prompt') or '') else 'Line breaks approximate.'
+    if pol: lyr=pol; lnote='Text polished 2026-11-08; the take sings the original.'
     tracks.append({'n':i,'id8':k,'title':p['name'],'sub':p.get('sub',''),'line':p.get('line',''),'dur':round(md.get('duration') or 0),
       'audio':f'../audio/{k}.m4a' if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '','art':f'../art/{k}.jpeg' if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
-      'suno':p.get('share') or 'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in (md.get('prompt') or '') else 'lines approximate','made':c['created_at'][:10]})
+      'suno':p.get('share') or 'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':lnote,'made':c['created_at'][:10]})
 data={'built':datetime.date.today().isoformat(),'tracks':tracks}
 t=open(os.path.join(R,'assets','reel_template.html'),encoding='utf-8').read()
 t=t.replace('<title>ai.ie · a reel</title>','<title>ai.ie · Truthiness and Other Facts</title>')

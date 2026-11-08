@@ -17,7 +17,7 @@ for i,p in enumerate(picks,1):
     y,m=p['month'].split('-')
     tracks.append({'n':i,'id8':k,'title':p['name'],'sub':f"{MON[m]} {y}",'line':p.get('line',''),'dur':round(md.get('duration') or 0),
       'audio':f'../audio/{k}.m4a' if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '','art':f'../art/{k}.jpeg' if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
-      'suno':'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in (md.get('prompt') or '') else 'lines approximate','made':c['created_at'][:10]})
+      'suno':'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in (md.get('prompt') or '') else 'Line breaks approximate.','made':c['created_at'][:10]})
 data={'built':datetime.date.today().isoformat(),'tracks':tracks}
 t=open(os.path.join(R,'assets','reel_template.html'),encoding='utf-8').read()
 # page-specific text

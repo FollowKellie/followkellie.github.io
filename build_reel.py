@@ -16,7 +16,7 @@ for i,k in enumerate(ORDER,1):
     lyr=p if '\n' in p else heur_lines(p)
     d=DISP.get(k,{}); tracks.append({'n':i,'id8':k,'title':d.get('name') or c['title'].strip(),'sub':d.get('sub',''),'line':d.get('line',''),'suno_title':c['title'].strip(),'dur':round(md.get('duration') or 0),
       'audio':'audio/%s.m4a'%k if os.path.exists(os.path.join(R,'audio',k+'.m4a')) else '', 'art':'art/%s.jpeg'%k if os.path.exists(os.path.join(R,'art',k+'.jpeg')) else '',
-      'suno':'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in p else 'lines approximate','made':c['created_at'][:10],'model':c.get('major_model_version','')})
+      'suno':'https://suno.com/song/'+c['id'],'lyrics':lyr,'lnote':'' if '\n' in p else 'Line breaks approximate.','made':c['created_at'][:10],'model':c.get('major_model_version','')})
 data={'built':datetime.date.today().isoformat(),'tracks':tracks}
 tpl=open(os.path.join(R,'assets','reel_template.html'),encoding='utf-8').read()
 out=tpl.replace('/*DATA*/','const D='+json.dumps(data,ensure_ascii=False).replace('</','<\\/')+';').replace('{{BUILT}}',data['built'])
