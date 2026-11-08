@@ -26,3 +26,16 @@ Page: https://followkellie.github.io/truthiness/
 - Polished lyric files + foreword: ~/Documents/SunoArchive/ListeningRoom/reel/polish/
 - Naming notes: ~/Documents/SunoArchive/naming/NAMING-SHEET_2026-11-04.md
 - Political profile (Drive): https://docs.google.com/document/d/1XefhpyUmCRONifRgZ4IEuUgMI-z0wK-QTl2cAD3uROI
+
+## STATUS (reel/naming session a5d26dc8, 2026-11-08) — this file is the one task list; nothing kept elsewhere
+1. DONE: track 8 = It Is Connection dc101da1 (share U5AjJa1SwqgGPCVl), pushed; WAV download started, Shine + full audio to follow. Loneliness c30d26a7 off the page (its WAV/Shine render kept on disk).
+2. OPEN: Systemic Stupidity is a candidate only, not on the page; family refresh from Suno + liked-first pick pending (needs a fresh library pull, item 11).
+3. DONE (check): liked-first re-check of all 16 picks against liked_2026-11-04.jsonl (1,414 likes). 14 of 16 picks are LIKED. Not liked: Credibility Is the Flow 3f3593c7 (no liked take exists in that family); A Quiet Siege 86657a10 (71 plays) — liked takes in the family are 378fcc55 (public, synthwave, 26 plays) and 18bfe2e7 (private). Her call whether Siege swaps to 378fcc55 (one more download).
+4. DONE: track 1 untouched (HELD header honored).
+5. OPEN: word flags await her word (07 Takes made; 15 what's is there / strength other lean upon). 6. DONE: cashpers stays.
+7. SUPERSEDED: the page foreword is live (v6 + Jan 2024 lines); the separate track-1 foreword draft is not used.
+8. OPEN: Choose Well / Meditations take + Art Exhibit set: no Art Exhibit album or playlist exists in the 11-04 listing; propose opening one when she names its first tracks.
+9. OPEN: per-track take status line (date, liked, public/private) — build change, small.
+10. OPEN: one honesty line under the intro — will add with 9.
+11. OPEN: fresh library pull (publish flags and likes are stale since 11-04).
+Cathedral series: proposal written to ~/Documents/SunoArchive/naming/CATHEDRAL-SERIES_proposal_2026-11-08.md for her read-back; no renames run.
