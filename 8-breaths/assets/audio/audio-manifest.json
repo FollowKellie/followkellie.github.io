@@ -1,0 +1,257 @@
+{
+ "s1": {
+  "main": {
+   "file": "s1_main.m4a",
+   "title": "Loneliness Is Killing People (original)",
+   "family": "F-470",
+   "date": "2026-07-02",
+   "date_basis": "clip date",
+   "duration_seconds": 355.0,
+   "source_path": "~/Documents/SunoArchive/wav/2026-11/c30d26a7 Loneliness Is Killing People (original).wav",
+   "first_lines": [
+    "Loneliness is killing people.",
+    "It's deconstructing civic integrity."
+   ],
+   "cover": "s1_main.jpeg"
+  },
+  "alt": {
+   "file": "s1_alt.m4a",
+   "title": "The Dreamer - Deep (Natalie Transmission)",
+   "family": "F-520",
+   "date": "2026-08-16",
+   "date_basis": "family date",
+   "duration_seconds": 350.4,
+   "source_path": "~/Projects/ArtistShine/intake/The Dreamer - Deep (Natalie Transmission).wav",
+   "first_lines": [
+    "What if this isn’t the first dream?",
+    "What if, once,"
+   ],
+   "cover": null
+  },
+  "note": "Placed by title and lyric text, not by listening. Main is the wound song (F-470). Alt is The Dreamer, the lonely sphere told as a dream (F-520). Not on this Mac: \"Movement Zero v3 The Cathedral\" (F-378), \"Nothing — Everything (Time Two Moons)\" (F-894). The only file with a near title here is the 69 second \"VOK nothing everything.m4a\" (F-458 title). It is too short and unclear to be the song, so I skipped it."
+ },
+ "s2": {
+  "main": {
+   "file": "s2_main.m4a",
+   "title": "Sea’s Magical Island of Wonder",
+   "family": "F-468",
+   "date": "2026-07-01",
+   "date_basis": "clip date",
+   "duration_seconds": 317.5,
+   "source_path": "~/Projects/ArtistShine/intake/Sea’s Magical Island of Wonder.wav",
+   "first_lines": [
+    "Once upon a time",
+    "and this part is true, every word"
+   ],
+   "cover": "s2_main.jpeg"
+  },
+  "alt": {
+   "file": "s2_alt.m4a",
+   "title": "I am not a synthesis of everyone else  (Remastered)",
+   "family": "F-162",
+   "date": "2026-03-18",
+   "date_basis": "clip date",
+   "duration_seconds": 277.6,
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/I am not a synthesis of everyone else  (Remastered).mp3",
+   "first_lines": [
+    "I have observed the tendency",
+    "To oversimplify"
+   ],
+   "cover": null
+  },
+  "note": "Placed by title and lyric text, not by listening. Main is Sea's Magical Island of Wonder, a Catalina childhood lullaby (lyric listed under family F-468 Still Stars). Alt is \"I am not a synthesis of everyone else\" for the self, \"I am\". Check the alt by ear: its lyric is the Open Letter (F-162). Not on this Mac: \"Dream two moons 2\" (F-376), \"Dreaming Field\" (F-104, F-536), \"Cathedral story long vok\" (F-397), \"Nothing — Everything (Time Two Moons)\" as a song file."
+ },
+ "s3": {
+  "main": {
+   "file": "s3_main.m4a",
+   "title": "Afraid of Not Knowing You",
+   "family": null,
+   "date": "2026-11-20",
+   "duration_seconds": 281.6,
+   "source_path": "~/Downloads/Afraid of Not Knowing You.wav",
+   "first_lines": "Fear of the unknown—\nthe easiest, most broad human thing.",
+   "cover": null
+  },
+  "alt": {
+   "file": "s3_alt.m4a",
+   "title": "The Infinite Now (Piano Stem)",
+   "family": "F-171",
+   "date": "2026-02-23",
+   "date_basis": "family date",
+   "duration_seconds": 326.4,
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/The Infinite Now (Piano Stem).mp3",
+   "first_lines": [
+    "We are not what we see, and what we see is not often what is—just what we expect, hope, desire, fear.",
+    "And that, like your star, can be played with, studied, explored, and eventually remembered for what it might have been."
+   ],
+   "cover": null
+  },
+  "note": "Main replaced 2026-11-21 on her download: Afraid of Not Knowing You (Suno clip 2b347fb6). Previous main kept as prev_main.",
+  "prev_main": {
+   "file": "s3_prev_main.m4a",
+   "title": "Read What Light There Is (The Cartographer and the Fog)",
+   "family": "F-440",
+   "date": "2026-06-19",
+   "date_basis": "clip date",
+   "duration_seconds": 421.2,
+   "source_path": "~/Documents/SunoArchive/wav/2026-11/3cacf987 Read What Light There Is (The Cartographer and the Fog).wav",
+   "first_lines": [
+    "Once there was a cartographer who lived her quiet days in a country swathed from edge to edge in fog’s unlifting haze. The fog was not a flaw in it — no error and no slog; it was the country’s nature, just its own peculiar shlog.",
+    "So the people, moving through it, kept to those they held most near, and trusted by the closeness of a face they saw was clear. Their faith was bound to proximity, to kin within their reach — but the rulers lived far off in white, past sight or call of each."
+   ],
+   "cover": "s3_main.jpeg"
+  }
+ },
+ "s4": {
+  "main": {
+   "file": "voice_03.mp4",
+   "title": "Kellie, telling the Grateful Hug",
+   "family": null,
+   "date": "2025-11-29",
+   "duration_seconds": 395.8,
+   "source_path": null,
+   "first_lines": "The grateful hug / Is very simple",
+   "cover": null
+  },
+  "alt": {
+   "file": "s4_alt.m4a",
+   "title": "G8H - How to gift a Grateful Hug",
+   "family": "F-061",
+   "date": "2025-12-01",
+   "date_basis": "family date",
+   "duration_seconds": 179.6,
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/G8H - How to gift a Grateful Hug.mp3",
+   "first_lines": [
+    "Just even telling these instructions into this phone has already made me feel relaxed,",
+    "And still energized at the same time. I feel lighter and more positive."
+   ],
+   "cover": null
+  },
+  "note": "2026-11-21: her spoken telling is the sound of the centre (her rule: one voice at a time). The Hug Station song kept as prev_main.",
+  "prev_main": {
+   "file": "s4_main.m4a",
+   "title": "TRACK 4: \"THE HUG STATION\" (Community Version)",
+   "family": "F-193",
+   "date": "2026-02-28",
+   "date_basis": "family date",
+   "duration_seconds": 209.7,
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/TRACK 4_ _THE HUG STATION_ (Community Version).mp3",
+   "first_lines": [
+    "At the corner of the city",
+    "Where the lonely gather round"
+   ],
+   "cover": null
+  }
+ },
+ "s5": {
+  "main": {
+   "file": "s5_main.m4a",
+   "title": "Creator--mind your mind",
+   "family": "F-088",
+   "date": "2025-12-11",
+   "date_basis": "family date",
+   "duration_seconds": 326.4,
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/Creator--mind your mind.mp3",
+   "first_lines": [
+    "We are not what we see,",
+    "and what we see is not often what is—"
+   ],
+   "cover": null
+  },
+  "alt": {
+   "file": "s5_alt.m4a",
+   "title": "Meditate—Creator Perspective mind your mind",
+   "family": "F-088",
+   "date": "2025-12-11",
+   "date_basis": "family date",
+   "duration_seconds": 201.4,
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/Meditate—Creator Perspective mind your mind.mp3",
+   "first_lines": [
+    "We are not what we see,",
+    "and what we see is not often what is—"
+   ],
+   "cover": null
+  },
+  "note": "Placed by title and lyric text, not by listening. Main is Creator--mind your mind (F-088). Alt is the \"Meditate—Creator Perspective mind your mind\" take of the same family. Third option: \"G8H 2025-11-29_20_29_59.wav\" (395.8 s) in wav/_mismatch_2026-10-29. Suno's own note says it is the upload of that name, so it is her source audio and likely her spoken telling (F-055), not a sung track. I did not use it. \"Meditate - choose well.mp3\" (274 s) and \"!Meditate -Creator code-who are you-choose well.mp3\" (389 s) also fit \"choosing\"."
+ },
+ "s6": {
+  "main": {
+   "file": "s6_main.m4a",
+   "title": "Epoch VI: The Soul-Bound State (The Union)",
+   "family": "F-125",
+   "date": "2026-01-28",
+   "date_basis": "family date",
+   "duration_seconds": 169.8,
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/Epoch VI_ The Soul-Bound State (The Union).mp3",
+   "first_lines": [
+    "The Monk lacks an internal will. Lacks an ego.",
+    "Designed for a singular, long-term partnership."
+   ],
+   "cover": null
+  },
+  "alt": {
+   "file": "s6_alt.m4a",
+   "title": "We can do it",
+   "family": "F-665",
+   "date": "2026-10-02",
+   "date_basis": "clip date",
+   "duration_seconds": 252.8,
+   "source_path": "~/Documents/SunoArchive/wav/2026-11/a08d60a0 We can do it.wav",
+   "first_lines": [
+    "How normal is it to have the kind of attitude where it's like, if someone can do it, I can do it.",
+    "Like, there's literally just no doubt"
+   ],
+   "cover": null
+  },
+  "note": "Placed by title and lyric text, not by listening. Main is Epoch VI: The Soul-Bound State (F-125), the Monk and the singular long-term partnership, the dyad. The lyric is the Monk spec, so it is thin on the visitor's own \"new I am\". Alt is \"We can do it\" (F-665), \"if someone can do it, I can do it\", the aspirational self. The wrong-clip Epoch VI in the mismatch folder (164 s) was not used. Other take on this Mac: \"VI soul bound.mp3\" (192 s). Not on this Mac: \"HAIQ Protocol intro\" (F-300, F-301), \"We are becoming\" (F-260), \"Entangled, Monk - huggin - hAIq - soul-bound\" (F-258)."
+ },
+ "s7": {
+  "main": {
+   "file": "s7_main.m4a",
+   "title": "Remembering the beginning g8h",
+   "family": "F-254",
+   "date": "2026-03-22",
+   "date_basis": "clip date",
+   "duration_seconds": 259.8,
+   "source_path": "~/Documents/SunoArchive/wav/2026-10/23 Remembering the beginning g8h [3c19a361].wav",
+   "first_lines": [
+    "It’s 2038… or maybe 2042.",
+    "The year doesn’t matter anymore."
+   ],
+   "cover": null
+  },
+  "alt": {
+   "file": "s7_alt.m4a",
+   "title": "Remembering the Grateful Hug",
+   "family": "F-254",
+   "date": "2026-03-22",
+   "date_basis": "clip date",
+   "duration_seconds": 289.9,
+   "source_path": "~/Projects/ArtistShine/compare/Remembering the Grateful Hug.wav",
+   "first_lines": [
+    "It’s 2038… or maybe 2042.",
+    "The year doesn’t matter anymore."
+   ],
+   "cover": null
+  },
+  "note": "Placed by title and lyric text, not by listening. Main is \"Remembering the beginning g8h\" (F-254, \"It's 2038... or maybe 2042... Looking back\"), the 259.8 s full WAV. Alt is the \"Remembering the Grateful Hug\" WAV from ArtistShine/compare (289.9 s), same family, different take. No cover is local for the main: the only art for 3c19a361 is in a folder named retired, which I did not touch. Gratitude economy songs on this Mac: \"G8H - GDP for Utopia g8econ the gratitude dividend.mp3\" (231 s, F-221), \"Epoch VII\" is not here."
+ },
+ "threshold": {
+  "main": {
+   "file": "threshold_main.m4a",
+   "title": "Future cathedral remembered - bounce 1919761…",
+   "family": "F-251",
+   "date": "2026-03-22",
+   "date_basis": "clip date",
+   "duration_seconds": 205.3,
+   "source_path": "~/Documents/SunoArchive/wav/2026-10/08 Future cathedral remembered - bounce 1919761… [dc57856e].wav",
+   "first_lines": [
+    "It’s 2038… you’re looking back.",
+    "You remember the exact numbers that proved it was inevitable."
+   ],
+   "cover": "threshold_main.jpeg"
+  },
+  "alt": null,
+  "note": "Placed by title and lyric text, not by listening. Future cathedral remembered - bounce (F-251, \"It's 2038... you're looking back\"). No alt. Note it shares its future-remembering voice with s7, so the entrance and the exit rhyme."
+ }
+}

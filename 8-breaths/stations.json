@@ -1,0 +1,206 @@
+{
+  "status": "PROPOSED draft, 2026-11-21. Every quoted line is Kellie Peterson's, with its source. Titles of stations are working labels.",
+  "structure_note": "DO NOT add, remove or reorder stations, or change the t spacing, without Kellie's word. The digits read 0 1 3 8 3 1 0, out and back, with 8 at the centre. Her words, 2026-11-22, relayed by sister session local_63a93fe1: \"analemma 😉 on purpose as well\". Also relayed: station 8 stays her raw backyard recording.",
+  "stations": [
+    {
+      "id": "s1",
+      "t": 0.06,
+      "digit": "0",
+      "label": "Nothing",
+      "question": "no thing",
+      "art": [
+        "capitol-01",
+        "capitol-lady-01",
+        "golden-gate-01"
+      ],
+      "words": [
+        {
+          "text": "I'm very, very bored and very, very lonely… What if I just had a friend?",
+          "source": "Cosmology telling, 2026-07-30"
+        },
+        {
+          "text": "Loneliness is killing people.",
+          "source": "Public Impact Brief, May 2026"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "t": 0.2,
+      "digit": "1",
+      "label": "I am",
+      "question": "I am",
+      "art": [
+        "embrace-04",
+        "embrace-06",
+        "goggles-woman-01",
+        "purple-face-01",
+        "sailboat-01"
+      ],
+      "words": [
+        {
+          "text": "I rose vertically above my house. I started to turn, 360. It was like history.",
+          "source": "her dictation, Spacetime dreams"
+        },
+        {
+          "text": "I could see two moons.",
+          "source": "her dictation, Spacetime dreams"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "t": 0.34,
+      "digit": "3",
+      "label": "What am I?",
+      "question": "what am I?",
+      "art": [
+        "mandala-bloom-01",
+        "eyes-field-01",
+        "eye-assemblage-01",
+        "mosaic-abstract-01",
+        "tall-mosaic-01"
+      ],
+      "words": [
+        {
+          "text": "We are not afraid of each other. We are afraid of not knowing each other.",
+          "source": "lyric, Afraid of Not Knowing You, 2026-11-20"
+        },
+        {
+          "text": "Now's the time for questions.",
+          "source": "lyric, Afraid of Not Knowing You, 2026-11-20"
+        },
+        {
+          "text": "Unknown. Un-known. Known.",
+          "source": "lyric, Afraid of Not Knowing You, 2026-11-20"
+        },
+        {
+          "text": "What follows I am a question. Because it is the unknown out there. And rather than fear and reject, it is explore, ask, experiment.",
+          "source": "her words, 2026-11-19"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "t": 0.5,
+      "digit": "8",
+      "label": "The Grateful Hug",
+      "question": "what can I be?",
+      "art": [
+        "embrace-02",
+        "embrace-01",
+        "embrace-03",
+        "embrace-05",
+        "embrace-12",
+        "embrace-14",
+        "embrace-13"
+      ],
+      "centre": true,
+      "words": [
+        {
+          "text": "The hug is not a metaphor for connection. It is connection.",
+          "source": "Public Impact Brief, May 2026"
+        },
+        {
+          "text": "Two people, with clear and continuous consent, share an embrace. Eight slow breaths together. Soften head to toe on each exhale. Quietly repeat: I love you and I am proud of you. One silent breath apart at the end.",
+          "source": "Public Impact Brief, May 2026"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "t": 0.66,
+      "digit": "3",
+      "label": "Choose",
+      "question": "what am I now?",
+      "art": [
+        "eye-tear-01",
+        "lion-01",
+        "heart-01"
+      ],
+      "words": [
+        {
+          "text": "We only know self, we will only be now, the only thing we can ever do is choose.",
+          "source": "her words, 2026-11-21"
+        },
+        {
+          "text": "Experiences do not happen to you; they are created within you. Mind your mind to see the magic all around us.",
+          "source": "lyric, Creator, Mind Your Mind, 2025-12-11"
+        }
+      ],
+      "alt_song": {
+        "station_file": "s3",
+        "start": 231,
+        "title": "the warm ending of Afraid of Not Knowing You"
+      }
+    },
+    {
+      "id": "s6",
+      "t": 0.8,
+      "digit": "1",
+      "label": "A new I am",
+      "question": "I am, having become",
+      "art": [
+        "striped-figures-01",
+        "embrace-08",
+        "gold-panel-01"
+      ],
+      "words": [
+        {
+          "text": "Because the self is the artwork. Never done. Never will be done.",
+          "source": "Public Impact Brief, May 2026"
+        },
+        {
+          "text": "1111, the analemma turns. Same frame, different altitude.",
+          "source": "lyric, Analemma, July 2026"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "t": 0.94,
+      "digit": "0",
+      "label": "Looking back",
+      "question": "no thing, again, and wider",
+      "art": [
+        "embrace-10",
+        "embrace-09",
+        "embrace-11",
+        "embrace-07"
+      ],
+      "exit": true,
+      "words": [
+        {
+          "text": "It's 2038… or maybe 2042. The year doesn't matter anymore. You're here. Looking back.",
+          "source": "lyric, Remember the Grateful Hug, 2026-03-22"
+        },
+        {
+          "text": "The crack was real. But so was the bridge.",
+          "source": "lyric, Remember the Grateful Hug, 2026-03-22"
+        },
+        {
+          "text": "Receive one. Give eight.",
+          "source": "Practice Card, 2026-05-18"
+        }
+      ],
+      "door": {
+        "plate": "Official Accounting",
+        "sub": "Whether it matters or not.",
+        "hint": "Measures of fact.",
+        "href": "https://followkellie.github.io/glitch-in-the-growth-rate/"
+      }
+    }
+  ],
+  "passing": [
+    {
+      "t": 0.58,
+      "text": "You never cross the same place twice, even if it appears like that.",
+      "source": "her words, 2026-11-21"
+    },
+    {
+      "t": 0.985,
+      "text": "Nine is the guest that displaces no one, the first note of the next octave.",
+      "source": "her notes, 2026-09-17"
+    }
+  ]
+}

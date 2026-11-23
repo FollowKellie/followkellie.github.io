@@ -1,0 +1,107 @@
+{
+ "bed": {
+  "file": "assets/audio/bed_main.mp4",
+  "title": "Odd One Too (deep velvet sub-bass, layered birdsong, take 3) [local file: Quiet Enigmatic (Creative Transmission)]",
+  "date": "2026-07-05",
+  "duration_seconds": 327.8,
+  "source_path": "~/Documents/SunoArchive/wav/2026-10/12 Quiet  Enigmatic (Creative Transmission) [1b5202b3].wav",
+  "why": "Her tags: quantum drone beds, radio astronomy static, fog horn drone, radio telemetry, minimal data-ambient pulses, whale calls, birdsong, slow cosmic arc. Almost no lyric (Here / Now / Hello). Liked, 62 plays. Chosen from titles, tags and words, not by listening."
+ },
+ "bed_alt": {
+  "file": "assets/audio/bed_alt.mp4",
+  "title": "A Spiral Already There (and a wide, and 58 bpm pulses, take 3) [local file: Emma's Song, Rivets & Spirals]",
+  "date": "2026-05-22",
+  "duration_seconds": 428.1,
+  "source_path": "~/Documents/SunoArchive/wav/2026-10/02 Emma’s Song—Rivets & Spirals [30756649].wav",
+  "why": "Her tags: data-ambient, orchestral drones, quantum glitch, Voyager-style telemetry beeps, high-frequency data pings. Title says spiral. Most played in the list (131). CAUTION: it carries a sung family lyric, so voices may compete. Chosen from titles, tags and words, not by listening."
+ },
+ "voices": [
+  {
+   "file": "assets/audio/voice_01.mp4",
+   "title": "VOK nothing everything",
+   "date": "2026-06-24 (family date)",
+   "duration_seconds": 69.4,
+   "t": 0.07,
+   "station": "s1",
+   "first_lines": "[soft, breathy female vocals] Nothing but everything will change / Nothing but everything will change, everything",
+   "source_path": "~/Music/Music/Media.localized/Music/Unknown Artist/Unknown Album/VOK nothing everything.m4a",
+   "note": "Short sung chant, not spoken. Fits 0 nothing. Check by ear that it is her voice and that it is not a Suno singer. Skipped for now: a sung chant, not a spoken piece.",
+   "skip": true
+  },
+  {
+   "file": "assets/audio/voice_02.mp4",
+   "title": "Not a Synthesis",
+   "date": "2026-06-01 (nearest index clip)",
+   "duration_seconds": 272.1,
+   "t": 0.21,
+   "station": "s2",
+   "first_lines": "[Soundscape: Rain on glass. Wind in leaves.] If you're normal, that's a negative. An undesirable as usual. Exceptional uncommon. By definition.",
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/Not a Synthesis.mp3",
+   "note": "Index tags: ambient spoken word, close mic narration. The words are the Open Letter family (F-162), more about being exceptional than island. File is 272 s, the index clip is 244 s, so it may be another take. Check by ear.",
+   "skip": true
+  },
+  {
+   "file": "assets/audio/voice_03.mp4",
+   "title": "G8H 2025-11-29_20_29_59 (her upload)",
+   "date": "2025-11-29",
+   "duration_seconds": 395.8,
+   "t": 0.49,
+   "station": "s4",
+   "first_lines": "The grateful hug / Is very simple / Is very simple / I for whatever reason feel inspired to say something like / You know what, I would love to share with you / A grateful hug",
+   "source_path": "~/Documents/SunoArchive/wav/_mismatch_2026-10-29/G8H 2025-11-29_20_29_59.wav",
+   "note": "Her own recording as uploaded to the service (index: ambient spoken word, female voice, conversational and intimate). 6:36, longer than the 4 minute guide. Kept because it is the clearest telling of the hug. Drop if too long.",
+   "skip": true
+  },
+  {
+   "file": "assets/audio/voice_04.mp4",
+   "title": "G8H - How to gift a Grateful Hug",
+   "date": "2025-12-01 (family date)",
+   "duration_seconds": 179.6,
+   "t": 0.53,
+   "station": "s4",
+   "first_lines": "[Spoken Word, Calm] Just even telling these instructions into this phone has already made me feel relaxed, And still energized at the same time. / The grateful hug is very simple.",
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/G8H - How to gift a Grateful Hug.mp3",
+   "note": "Same title sits on a Turkish family (F-106). Check by ear that this file is the English one.",
+   "skip": true
+  },
+  {
+   "file": "assets/audio/voice_05.mp4",
+   "title": "Meditate—Creator Perspective mind your mind",
+   "date": "2025-12-11 (family date)",
+   "duration_seconds": 201.4,
+   "t": 0.64,
+   "station": "s5",
+   "first_lines": "(Part 1: Perception & Creation) We are not what we see, and what we see is not often what is. [family F-088, Part 2: Mind your mind to see the magic all around us.]",
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/Meditate—Creator Perspective mind your mind.mp3",
+   "note": "Family text has male and female vocal parts. Spoken or sung is not confirmed. Check by ear.",
+   "skip": true
+  },
+  {
+   "file": "assets/audio/voice_06.mp4",
+   "title": "Meditate - choose well",
+   "date": "2025-12-23",
+   "duration_seconds": 275.0,
+   "t": 0.7,
+   "station": "s5",
+   "first_lines": "In this ever-changing, expanding universe / Encourage magic. / Create it. Creator. / ... / The one thing you can do is choose. / Choose well. / Choose wisely.",
+   "source_path": "~/Music/Music/Media.localized/Music/followkellie/Unknown Album/Meditate - choose well.mp3",
+   "note": "Index tags: world fusion, ambient spoken word, aged duet voices (male baritone, female alto). A Suno voice with her words, not her own voice. 4:35.",
+   "skip": true
+  },
+  {
+   "file": "assets/audio/voice_07.mp4",
+   "title": "Remembering the beginning g8h",
+   "date": "2026-03-22",
+   "duration_seconds": 259.8,
+   "t": 0.94,
+   "station": "s7",
+   "first_lines": "The year doesn't matter. What matters is you're here, looking back. Do you remember? The headlines that used to shock you... then just stopped.",
+   "source_path": "~/Documents/SunoArchive/wav/2026-10/23 Remembering the beginning g8h [3c19a361].wav",
+   "note": "Index: data ping sequence over quantum drone, processed spoken word. Has its own ping bed under the voice. Fits looking back from the future.",
+   "skip": true
+  }
+ ],
+ "use_bed": false,
+ "_note": "Her ruling 2026-11-21: songs stay and fade into each other; voices layer over them. The bed is kept as an option only. Voices marked skip are full tracks with their own music, or duplicates of a station song.",
+ "_note2": "2026-11-21: all voice layers off. Her rule: voices fade into each other, never talk over each other."
+}
