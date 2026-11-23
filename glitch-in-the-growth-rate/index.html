@@ -100,6 +100,16 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
   padding:.4rem .8rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;transform:rotate(-1.6deg)}
 
 /* --- the paper stops --- */
+.asks{list-style:decimal;margin:0;padding-left:1.9rem}
+.asks li{margin:0 0 1.15rem}
+.asks .ask{display:block;cursor:text}
+.asks .qtext{display:block;font-size:.98rem;line-height:1.5;margin-bottom:.35rem}
+.asks .qline{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.95rem;
+  line-height:1.6;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--rule);
+  padding:.2rem 0 .3rem;resize:none;overflow:hidden;min-height:28px;border-radius:0}
+.asks .qline:focus{outline:0;border-bottom-color:var(--ink);background:var(--paper-2)}
+.part3 .parthead h2{color:var(--ink)}
+.xref.unread .xhead{color:var(--ink-soft)}
 .xref{margin-top:2.25rem;border:1px solid var(--rule);background:var(--paper-2);padding:1.15rem 1.25rem 1rem}
 .xref .xhead{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--stamp);border-bottom:1px solid var(--rule);padding-bottom:.5rem;margin-bottom:.8rem}
@@ -166,7 +176,7 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
   <p class="sub">A statement of your contribution to Gross Domestic Product for the reporting year. Complete both parts. Figures are illustrative.</p>
 
   <p class="theme">This instrument has a theme: <a href="../audio/6f60b69d.m4a">Sign on the Line</a>.</p>
-  <p class="fineprint"><strong>INSTRUCTIONS.</strong> Mark each item that occurred during the reporting year. Do not omit an item on the grounds that it was unpleasant; pleasantness is not a reportable category. Both parts are compulsory. This instrument measures activity, not condition. No part of this form provides a space for how you are.</p>
+  <p class="fineprint"><strong>INSTRUCTIONS.</strong> Mark each item that occurred during the reporting year. Do not omit an item on the grounds that it was unpleasant; pleasantness is not a reportable category. Parts I and II are compulsory. This instrument measures activity, not condition. Part III is provided in error and is retained pending review.</p>
 
   <section class="part">
     <div class="parthead">
@@ -182,6 +192,14 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
       <span class="note">complete in full; figures assessed at computation</span>
     </div>
     <ul class="items" id="uncounted"></ul>
+  </section>
+
+  <section class="part part3">
+    <div class="parthead">
+      <h2>Part III — Not assessable</h2>
+      <span class="note">answer if you wish; this section is not read</span>
+    </div>
+    <ol class="asks" id="asks"></ol>
   </section>
 
   <div class="actions">
@@ -252,6 +270,9 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
     floor:   {id:"9e612e7c", name:"Can\u2019t Fall off the Floor",
               share:"https://suno.com/s/GZkDz0SpH131OraJ",
               line:"\u201cLower you thought you could go, but you can\u2019t fall off the floor.\u201d"},
+    asked:   {id:"d9e565f6", name:"Afraid of Not Knowing You",
+              share:"https://suno.com/s/ifiNclNYnxMwBQ56",
+              line:"\u201cApparently there\u2019s a void here in front of you.\u2026 Now\u2019s the time for questions.\u201d"},
     altitude:{id:"52266d37", name:"Wisdom or Trauma",
               share:"https://suno.com/s/vugGYdXv9bctglPw",
               line:"\u201cThe only difference between wisdom and trauma is gratitude. Same experience, different altitude.\u201d"}
@@ -259,7 +280,8 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
   var APPEAL = {id:"a08d60a0", name:"We Can Do It",
                 share:"../truthiness/",
                 line:"\u201cIf someone can do it, I can do it. There\u2019s literally no doubt.\u201d"};
-  function pickTrack(total, livedCount, pairCount){
+  function pickTrack(total, livedCount, pairCount, spoke){
+    if (spoke > 0)                     return TRACKS.asked;
     if (total === 0 && livedCount > 0) return TRACKS.ordinary;
     if (pairCount > 0)                 return TRACKS.care;
     if (total >= 60000)                return TRACKS.floor;
@@ -276,6 +298,37 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
       '<p class="imore"><a href="../truthiness/">the rest of them</a></p>' +
     '</div>';
   }
+
+  // Her questions. Hers alone, and a form cannot score any of them.
+  var ASKS = [
+    "For what do you suffer?",
+    "How do you choose?",
+    "Is your name safe in the mouths of others?",
+    "Who are you? What are your gifts? How do you give them away?",
+    "What is your why? Your protocol? Your core principles?",
+    "Whose intentions are we fulfilling?",
+    "Using, or used by?"
+  ];
+  (function(){
+    var ol = document.getElementById("asks");
+    ASKS.forEach(function(q, i){
+      var li = document.createElement("li");
+      li.innerHTML = '<label class="ask" for="ask-' + i + '">' +
+                       '<span class="qtext"></span>' +
+                       '<textarea id="ask-' + i + '" class="qline" rows="1" ' +
+                         'autocomplete="off" spellcheck="true"></textarea>' +
+                     '</label>';
+      li.querySelector(".qtext").textContent = q;
+      ol.appendChild(li);
+    });
+    ol.addEventListener("input", function(e){
+      var t = e.target;
+      if (t && t.classList.contains("qline")) {
+        t.style.height = "auto";
+        t.style.height = Math.max(t.scrollHeight, 28) + "px";
+      }
+    });
+  })();
 
   function fmt(n){ return "$" + n.toLocaleString("en-US"); }
 
@@ -322,6 +375,22 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
     });
     var c = classify(total, lived.length);
 
+    var spoke = [].slice.call(document.querySelectorAll(".qline"))
+                   .filter(function(t){ return t.value.trim().length > 0; }).length;
+    var unread = "";
+    if (spoke) {
+      unread =
+        '<div class="xref unread">' +
+          '<div class="xhead">Part III \u2014 no values returned</div>' +
+          '<p class="xlede">' + spoke + (spoke === 1 ? ' answer was' : ' answers were') +
+            ' entered. This instrument cannot read them.</p>' +
+          '<p class="xnote">Nothing you wrote in Part III was scored, stored, or sent ' +
+            'anywhere. There is no field for it, no office that receives it, and no ' +
+            'number it could become. It stayed in your own browser and it leaves with you.</p>' +
+          '<p class="xfoot">Retained pending review. Review is not scheduled.</p>' +
+        '</div>';
+    }
+
     var keys = {};
     hit.forEach(function(b){ keys[b.dataset.key] = true; });
     var matched = PAIRS.filter(function(pr){ return keys[pr[0]] && keys[pr[1]]; });
@@ -365,7 +434,7 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
         '<div class="total"><span class="k">Your contribution to Gross Domestic Product</span>' +
           '<span class="v">' + fmt(total) + '</span></div>' +
         '<div class="stamp">' + c[1] + '</div>' +
-      '</div>' + xref +
+      '</div>' + xref + unread +
       '<div class="break"><div class="inner">' +
         '<p>' + c[0] + '</p>' +
         '<p>There is a difference between a good life and a life broken.</p>' +
@@ -381,7 +450,7 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
             '</ul></div>'
           : '') +
         '<p class="verdict" style="margin-top:2.5rem">Stop measuring how fast we burn out.<br>Start measuring how well we become.</p>' +
-        issue(pickTrack(total, lived.length, matched.length), 'Issued with this return') +
+        issue(pickTrack(total, lived.length, matched.length, spoke), 'Issued with this return') +
         issue(APPEAL, 'Right of appeal') +
         '<div class="colophon">Form GDP&#8209;1 is not a real instrument. The accounting is. Household work, unpaid care and good health have never entered national accounts; disaster, illness and imprisonment always have.<br><br>Lines from <em><a class="src" href="https://suno.com/s/ouENZQIv4y9J3mUU">Glitch in the Growth Rate</a></em>.<br><br><a class="imprint" href="https://followkellie.github.io/">ai.ie</a></div>' +
       '</div></div>';

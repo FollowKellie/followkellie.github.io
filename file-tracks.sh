@@ -18,6 +18,7 @@ match_id () {
     *wisdom*or*trauma*)                  print "52266d37" ;;
     *ordinary*day*)                      print "679884f9" ;;
     *we*can*do*it*)                      print "a08d60a0" ;;
+    *afraid*of*not*knowing*)             print "d9e565f6" ;;
     *loneliness*killing*people*)         print "c30d26a7" ;;
     *)                                   print "" ;;
   esac
@@ -40,7 +41,7 @@ if (( filed == 0 )); then
   print "  wisdom or trauma / signed and prayed / loneliness...killing people"
 else
   print "$filed filed. Now in audio/:"
-  for id in 679884f9 9e612e7c 52266d37 6f60b69d 108f79a7 a08d60a0 dc9aa87d 1875425a c30d26a7; do
+  for id in d9e565f6 679884f9 9e612e7c 52266d37 6f60b69d 108f79a7 a08d60a0 dc9aa87d 1875425a c30d26a7; do
     for g in "$AUD/$id".*(Nom); do print "  ${g:t}  $(du -h "$g" | cut -f1)"; done
   done
 fi
