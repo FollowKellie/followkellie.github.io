@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A statistical return from the Division of Measured Life. Tick what happened to you last year. It will tell you what you were worth.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Form GDP-1 — Return of Measured Life">
+<meta property="og:description" content="Tick what happened to you last year. It will tell you what you were worth. Part II is assessed at nothing.">
+<meta property="og:url" content="https://followkellie.github.io/glitch-in-the-growth-rate/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Form GDP-1 — Return of Measured Life">
+<meta name="twitter:description" content="Tick what happened to you last year. It will tell you what you were worth. Part II is assessed at nothing.">
+<title>Form GDP-1</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<style>
+/* Layout: a single-column statistical return on paper stock, which stops being paper. */
+:root{
+  --paper:#e8e3d7;          /* manila stock */
+  --paper-2:#f2eee4;        /* the lighter field inside a ruled box */
+  --ink:#23201a;            /* typewriter black, warmed */
+  --ink-soft:#6d675a;       /* fine print */
+  --rule:#b5ad99;           /* printed rules */
+  --stamp:#9c2b20;          /* the red of a received stamp */
+  --void:#14161a;           /* what is behind the paper */
+  --void-ink:#efece6;
+  --void-soft:#8e9099;
+  --mono:"Courier Prime",ui-monospace,"Courier New",monospace;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#1b1d21; --paper-2:#212429; --ink:#e4e1d8; --ink-soft:#8b8b84;
+  --rule:#3c4047; --stamp:#d4604f; --void:#0b0c0e; --void-ink:#f1eee8; --void-soft:#7d8089;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#1b1d21; --paper-2:#212429; --ink:#e4e1d8; --ink-soft:#8b8b84;
+  --rule:#3c4047; --stamp:#d4604f; --void:#0b0c0e; --void-ink:#f1eee8; --void-soft:#7d8089;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:15px;line-height:1.5;margin:0}
+.sheet{max-width:46rem;margin:0 auto;padding-block:2.5rem 4rem;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* --- masthead --- */
+.rule{border:0;border-top:1px solid var(--rule);margin:0}
+.rule.thick{border-top-width:3px}
+.masthead{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;align-items:flex-end;padding-block:.6rem .5rem}
+.agency{font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-soft);line-height:1.6}
+.formno{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);text-align:right;min-width:0}
+h1{font-family:var(--mono);font-weight:700;font-size:clamp(1.3rem,5.5vw,1.85rem);letter-spacing:-.01em;
+  text-transform:uppercase;margin:1.4rem 0 .35rem;text-wrap:balance}
+.sub{font-size:.8rem;color:var(--ink-soft);margin:0 0 1.5rem;max-width:34rem}
+.fineprint{font-size:.7rem;line-height:1.65;color:var(--ink-soft);background:var(--paper-2);
+  border:1px solid var(--rule);padding:.75rem .85rem;margin:0 0 2.25rem}
+
+/* --- parts --- */
+.part{margin-block:0 2.25rem}
+.parthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .9rem;margin-bottom:.15rem}
+.parthead h2{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin:0}
+.parthead .note{font-size:.7rem;color:var(--ink-soft)}
+.items{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.items li{border-bottom:1px solid var(--rule)}
+.row{display:flex;align-items:flex-start;gap:.75rem;padding:.6rem .15rem;cursor:pointer;min-width:0}
+.row:hover{background:var(--paper-2)}
+.row input{appearance:none;flex:0 0 auto;width:1.05rem;height:1.05rem;margin-top:.22rem;
+  border:1.5px solid var(--ink);background:transparent;cursor:pointer;border-radius:0}
+.row input:checked{background:var(--ink)}
+.row input:checked::after{content:"×";display:block;color:var(--paper);font-weight:700;
+  font-size:.95rem;line-height:.95rem;text-align:center}
+.row input:focus-visible{outline:2px solid var(--stamp);outline-offset:2px}
+.label{flex:1 1 auto;min-width:0}
+.amt{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--ink-soft);font-size:.85rem;
+  padding-top:.1rem;opacity:0;transition:opacity .25s}
+.showamt .amt{opacity:1}
+.amt.zero{color:var(--stamp)}
+
+/* --- compute --- */
+.actions{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center;margin-block:2rem 0}
+button{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:700;color:var(--paper);background:var(--ink);border:0;padding:.8rem 1.5rem;cursor:pointer}
+button:hover{background:var(--stamp)}
+button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
+.reset{background:transparent;color:var(--ink-soft);border:1px solid var(--rule);font-weight:400}
+.reset:hover{background:var(--paper-2);color:var(--ink)}
+
+/* --- the computed return --- */
+.return{margin-top:2.5rem;border:3px double var(--rule);padding:1.4rem 1.2rem}
+.retline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 1rem;
+  font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft);
+  padding-block:.45rem;border-bottom:1px dotted var(--rule)}
+.retline span:last-child{font-variant-numeric:tabular-nums;color:var(--ink)}
+.total{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.5rem 1rem;margin-top:1.1rem}
+.total .k{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);max-width:18rem}
+.total .v{font-size:clamp(1.7rem,8vw,2.6rem);font-weight:700;font-variant-numeric:tabular-nums}
+.stamp{display:inline-block;margin-top:1.2rem;border:2px solid var(--stamp);color:var(--stamp);
+  padding:.4rem .8rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;transform:rotate(-1.6deg)}
+
+/* --- the paper stops --- */
+.break{margin-top:3.5rem;background:var(--void);color:var(--void-ink);
+  margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));
+  margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding-block:3rem 3.25rem;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.break .inner{max-width:34rem;margin:0 auto}
+.break p{font-family:var(--serif);font-weight:300;font-size:clamp(1.15rem,4.6vw,1.5rem);
+  line-height:1.45;margin:0 0 1.1rem;text-wrap:balance}
+.break p.em{font-style:italic}
+.break .verdict{font-family:var(--mono);font-weight:700;font-size:clamp(1.05rem,4.4vw,1.35rem);
+  text-transform:uppercase;letter-spacing:.02em;line-height:1.35;margin-top:2rem;color:var(--void-ink)}
+.break .uncounted{margin-top:2.25rem;border-top:1px solid var(--void-soft);padding-top:1.1rem}
+.break .uncounted h3{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--void-soft);margin:0 0 .7rem;font-weight:400}
+.break .uncounted ul{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:1.02rem;line-height:1.75}
+.break .uncounted li::before{content:"— ";color:var(--void-soft)}
+.break .colophon{font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--void-soft);
+  margin-top:2.5rem;border-top:1px solid var(--void-soft);padding-top:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="sheet">
+
+  <hr class="rule thick">
+  <div class="masthead">
+    <div class="agency">Office of National Accounts<br>Division of Measured Life</div>
+    <div class="formno">Form GDP&#8209;1<br>Rev. 2026</div>
+  </div>
+  <hr class="rule">
+
+  <h1>Individual Contribution Assessment</h1>
+  <p class="sub">A statement of your contribution to Gross Domestic Product for the reporting year. Complete both parts. Figures are illustrative.</p>
+
+  <p class="fineprint"><strong>INSTRUCTIONS.</strong> Mark each item that occurred during the reporting year. Do not omit an item on the grounds that it was unpleasant; pleasantness is not a reportable category. Both parts are compulsory. This instrument measures activity, not condition. No part of this form provides a space for how you are.</p>
+
+  <section class="part">
+    <div class="parthead">
+      <h2>Part I — Counted</h2>
+      <span class="note">transactions entering the national accounts</span>
+    </div>
+    <ul class="items" id="counted"></ul>
+  </section>
+
+  <section class="part">
+    <div class="parthead">
+      <h2>Part II — Also reported</h2>
+      <span class="note">complete in full; figures assessed at computation</span>
+    </div>
+    <ul class="items" id="uncounted"></ul>
+  </section>
+
+  <div class="actions">
+    <button id="compute" type="button">Compute return</button>
+    <button id="clear" type="button" class="reset">Clear form</button>
+  </div>
+
+  <div id="result" hidden></div>
+</div>
+
+<script>
+(function(){
+  var COUNTED = [
+    ["A divorce, including legal representation", 18400],
+    ["A hospital admission lasting more than one night", 14200],
+    ["A prescription filled for anxiety, sleep or low mood", 1180],
+    ["Commuting more than an hour each day by car", 4350],
+    ["A vehicle collision requiring repair", 5600],
+    ["A funeral arranged", 9300],
+    ["A home security system installed after a break-in", 2250],
+    ["Replacing something that broke rather than mending it", 1900],
+    ["Food delivered because there was no time to cook", 3100],
+    ["A course of therapy following a redundancy", 4800],
+    ["A storm, a flood, or a fire, and the rebuilding after", 31000],
+    ["A relative held in a correctional facility", 42000]
+  ];
+  var UNCOUNTED = [
+    "A year without needing a doctor",
+    "Meals cooked at home, every day",
+    "Raising a child yourself",
+    "Caring for your own parent",
+    "A friendship kept up for twenty years",
+    "Walking instead of driving",
+    "Sleeping through the night",
+    "Growing something and eating it",
+    "Mending the thing instead of buying another",
+    "Time given to a neighbour",
+    "Being calm",
+    "Being grateful"
+  ];
+
+  function fmt(n){ return "$" + n.toLocaleString("en-US"); }
+
+  function build(ulId, rows, kind){
+    var ul = document.getElementById(ulId);
+    rows.forEach(function(r, i){
+      var label = kind === "counted" ? r[0] : r;
+      var amount = kind === "counted" ? r[1] : 0;
+      var li = document.createElement("li");
+      var id = kind + "-" + i;
+      li.innerHTML =
+        '<label class="row" for="' + id + '">' +
+          '<input type="checkbox" id="' + id + '" data-amt="' + amount + '" data-kind="' + kind + '">' +
+          '<span class="label"></span>' +
+          '<span class="amt' + (kind === "counted" ? '' : ' zero') + '">' +
+            (kind === "counted" ? fmt(amount) : "$0") +
+          '</span>' +
+        '</label>';
+      li.querySelector(".label").textContent = label;
+      ul.appendChild(li);
+    });
+  }
+  build("counted", COUNTED, "counted");
+  build("uncounted", UNCOUNTED, "uncounted");
+
+  function classify(total, livedCount){
+    if (total >= 60000) return ["An exceptional year for the economy.", "Filed — exemplary"];
+    if (total >= 20000) return ["A productive year.", "Filed — satisfactory"];
+    if (total > 0)      return ["A modest year.", "Filed — below target"];
+    if (livedCount > 0) return ["No measurable activity.", "Filed — nil return"];
+    return ["No measurable activity.", "Filed — nil return"];
+  }
+
+  document.getElementById("compute").addEventListener("click", function(){
+    document.querySelectorAll(".items").forEach(function(u){ u.classList.add("showamt"); });
+
+    var boxes  = [].slice.call(document.querySelectorAll("input[type=checkbox]"));
+    var hit    = boxes.filter(function(b){ return b.checked; });
+    var total  = hit.reduce(function(s,b){ return s + Number(b.dataset.amt); }, 0);
+    var lived  = hit.filter(function(b){ return b.dataset.kind === "uncounted"; });
+    var livedLabels = lived.map(function(b){
+      return b.closest(".row").querySelector(".label").textContent;
+    });
+    var c = classify(total, lived.length);
+
+    var html =
+      '<div class="return">' +
+        '<div class="retline"><span>Items reported, Part I</span><span>' + hit.filter(function(b){return b.dataset.kind==="counted";}).length + '</span></div>' +
+        '<div class="retline"><span>Items reported, Part II</span><span>' + lived.length + '</span></div>' +
+        '<div class="retline"><span>Assessed value, Part II</span><span>$0</span></div>' +
+        '<div class="total"><span class="k">Your contribution to Gross Domestic Product</span>' +
+          '<span class="v">' + fmt(total) + '</span></div>' +
+        '<div class="stamp">' + c[1] + '</div>' +
+      '</div>' +
+      '<div class="break"><div class="inner">' +
+        '<p>' + c[0] + '</p>' +
+        '<p>There is a difference between a good life and a life broken.</p>' +
+        '<p class="em">GDP measures both.</p>' +
+        '<p>A cage and a home, exactly the same.</p>' +
+        '<p>If you are healthy, calm, and grateful, you are a poor consumer.</p>' +
+        '<p class="verdict">You are a glitch in the growth rate.</p>' +
+        (livedLabels.length
+          ? '<div class="uncounted"><h3>Part II, in full — assessed at nothing</h3><ul>' +
+              livedLabels.map(function(t){
+                var li = document.createElement("li"); li.textContent = t; return li.outerHTML;
+              }).join("") +
+            '</ul></div>'
+          : '') +
+        '<p class="verdict" style="margin-top:2.5rem">Stop measuring how fast we burn out.<br>Start measuring how well we become.</p>' +
+        '<div class="colophon">Form GDP&#8209;1 is not a real instrument. The accounting is. Household work, unpaid care and good health have never entered national accounts; disaster, illness and imprisonment always have.<br><br>Lines from <em>Glitch in the Growth Rate</em>. Words: Kellie Peterson.</div>' +
+      '</div></div>';
+
+    var out = document.getElementById("result");
+    out.innerHTML = html;
+    out.hidden = false;
+    out.scrollIntoView({behavior:"smooth", block:"start"});
+  });
+
+  document.getElementById("clear").addEventListener("click", function(){
+    document.querySelectorAll("input[type=checkbox]").forEach(function(b){ b.checked = false; });
+    document.querySelectorAll(".items").forEach(function(u){ u.classList.remove("showamt"); });
+    var out = document.getElementById("result");
+    out.hidden = true; out.innerHTML = "";
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+})();
+</script>
+
+</body>
+</html>
