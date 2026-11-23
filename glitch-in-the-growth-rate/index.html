@@ -130,6 +130,7 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
   color:var(--void-soft);margin:0 0 .7rem;font-weight:400}
 .break .uncounted ul{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:1.02rem;line-height:1.75}
 .break .uncounted li::before{content:"— ";color:var(--void-soft)}
+.break .colophon a.src{color:var(--void-ink)}
 .break .colophon a.imprint{font-family:var(--mono);letter-spacing:.22em;text-transform:lowercase;font-size:.78rem;color:var(--void-ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;opacity:.75}
 .break .colophon a.imprint:hover,.break .colophon a.imprint:focus-visible{opacity:1}
 .theme{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--ink-soft);
@@ -242,29 +243,32 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
 
   // The form issues a song with your return. Different verdict, different song.
   var TRACKS = {
-    anthem: {id:"108f79a7", name:"Glitch in the Growth Rate",
-             share:"https://suno.com/s/ouENZQIv4y9J3mUU",
-             line:"You are the song. This is it."},
-    care:   {id:"dc101da1", name:"It Is Connection",
-             share:"https://suno.com/s/U5AjJa1SwqgGPCVl",
-             line:"\u201cThe hug is not a metaphor for connection. It is connection.\u201d"},
-    floor:  {id:"9e612e7c", name:"Can\u2019t Fall off the Floor",
-             share:"https://suno.com/s/GZkDz0SpH131OraJ",
-             line:"\u201cLower you thought you could go, but you can\u2019t fall off the floor.\u201d"},
+    ordinary:{id:"679884f9", name:"An Ordinary Day",
+              share:"https://suno.com/s/mwxJV4yoSkQ91cIp",
+              line:"\u201cA silly song \u2014 not really talking about anything at all.\u2026 No, not really. Truly, it is more than that.\u201d"},
+    care:    {id:"dc101da1", name:"It Is Connection",
+              share:"https://suno.com/s/U5AjJa1SwqgGPCVl",
+              line:"\u201cThe hug is not a metaphor for connection. It is connection.\u201d"},
+    floor:   {id:"9e612e7c", name:"Can\u2019t Fall off the Floor",
+              share:"https://suno.com/s/GZkDz0SpH131OraJ",
+              line:"\u201cLower you thought you could go, but you can\u2019t fall off the floor.\u201d"},
     altitude:{id:"52266d37", name:"Wisdom or Trauma",
-             share:"https://suno.com/s/vugGYdXv9bctglPw",
-             line:"\u201cThe only difference between wisdom and trauma is gratitude. Same experience, different altitude.\u201d"}
+              share:"https://suno.com/s/vugGYdXv9bctglPw",
+              line:"\u201cThe only difference between wisdom and trauma is gratitude. Same experience, different altitude.\u201d"}
   };
+  var APPEAL = {id:"a08d60a0", name:"We Can Do It",
+                share:"../truthiness/",
+                line:"\u201cIf someone can do it, I can do it. There\u2019s literally no doubt.\u201d"};
   function pickTrack(total, livedCount, pairCount){
-    if (total === 0 && livedCount > 0) return TRACKS.anthem;
+    if (total === 0 && livedCount > 0) return TRACKS.ordinary;
     if (pairCount > 0)                 return TRACKS.care;
     if (total >= 60000)                return TRACKS.floor;
     if (total > 0)                     return TRACKS.altitude;
-    return TRACKS.anthem;
+    return TRACKS.ordinary;
   }
-  function issue(t){
+  function issue(t, head){
     return '<div class="issued">' +
-      '<div class="ihead">Issued with this return</div>' +
+      '<div class="ihead">' + head + '</div>' +
       '<div class="iname">' + t.name + '</div>' +
       '<p class="iline">' + t.line + '</p>' +
       '<audio class="iplay" controls preload="none" src="../audio/' + t.id + '.m4a"' +
@@ -377,8 +381,9 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
             '</ul></div>'
           : '') +
         '<p class="verdict" style="margin-top:2.5rem">Stop measuring how fast we burn out.<br>Start measuring how well we become.</p>' +
-        issue(pickTrack(total, lived.length, matched.length)) +
-        '<div class="colophon">Form GDP&#8209;1 is not a real instrument. The accounting is. Household work, unpaid care and good health have never entered national accounts; disaster, illness and imprisonment always have.<br><br>Lines from <em>Glitch in the Growth Rate</em>.<br><br><a class="imprint" href="https://followkellie.github.io/">ai.ie</a></div>' +
+        issue(pickTrack(total, lived.length, matched.length), 'Issued with this return') +
+        issue(APPEAL, 'Right of appeal') +
+        '<div class="colophon">Form GDP&#8209;1 is not a real instrument. The accounting is. Household work, unpaid care and good health have never entered national accounts; disaster, illness and imprisonment always have.<br><br>Lines from <em><a class="src" href="https://suno.com/s/ouENZQIv4y9J3mUU">Glitch in the Growth Rate</a></em>.<br><br><a class="imprint" href="https://followkellie.github.io/">ai.ie</a></div>' +
       '</div></div>';
 
     var out = document.getElementById("result");
