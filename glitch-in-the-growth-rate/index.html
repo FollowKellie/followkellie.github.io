@@ -146,6 +146,8 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
 .theme{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--ink-soft);
   margin:0 0 1rem;padding-bottom:.9rem;border-bottom:1px dotted var(--rule)}
 .theme a{color:var(--stamp)}
+.break .trustnote{font-family:var(--mono);font-size:.78rem;line-height:1.8;color:var(--void-soft);
+  max-width:36em;margin:1.1rem 0 0;border-left:1px solid rgba(255,255,255,.18);padding-left:1rem}
 .break .issued{margin-top:3rem;border-top:1px solid rgba(255,255,255,.14);
   border-bottom:1px solid rgba(255,255,255,.14);padding:1.6rem 0 1.5rem}
 .break .issued .ihead{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;
@@ -449,6 +451,8 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
               }).join("") +
             '</ul></div>'
           : '') +
+        '<p class="em" style="margin-top:2.5rem">The real gold is trust.<br>The rest is, rust.</p>' +
+        '<p class="trustnote">It has no line on this form. It never has. There is no unit for it, no office that collects it, and no way to assess it \u2014 and nothing else on either list holds together without it.</p>' +
         '<p class="verdict" style="margin-top:2.5rem">Stop measuring how fast we burn out.<br>Start measuring how well we become.</p>' +
         issue(pickTrack(total, lived.length, matched.length, spoke), 'Issued with this return') +
         issue(APPEAL, 'Right of appeal') +
