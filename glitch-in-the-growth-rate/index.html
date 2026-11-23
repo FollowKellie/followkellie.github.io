@@ -6,6 +6,7 @@
 <meta name="description" content="A statistical return from the Division of Measured Life. Tick what happened to you last year. It will tell you what you were worth.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Form GDP-1 — Return of Measured Life">
+<meta property="og:site_name" content="ai.ie">
 <meta property="og:description" content="Tick what happened to you last year. It will tell you what you were worth. Part II is assessed at nothing.">
 <meta property="og:url" content="https://followkellie.github.io/glitch-in-the-growth-rate/">
 <meta name="twitter:card" content="summary_large_image">
@@ -115,6 +116,8 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
   color:var(--void-soft);margin:0 0 .7rem;font-weight:400}
 .break .uncounted ul{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:1.02rem;line-height:1.75}
 .break .uncounted li::before{content:"— ";color:var(--void-soft)}
+.break .colophon a.imprint{font-family:var(--mono);letter-spacing:.22em;text-transform:lowercase;font-size:.78rem;color:var(--void-ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;opacity:.75}
+.break .colophon a.imprint:hover,.break .colophon a.imprint:focus-visible{opacity:1}
 .break .colophon{font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--void-soft);
   margin-top:2.5rem;border-top:1px solid var(--void-soft);padding-top:1rem}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -257,7 +260,7 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
             '</ul></div>'
           : '') +
         '<p class="verdict" style="margin-top:2.5rem">Stop measuring how fast we burn out.<br>Start measuring how well we become.</p>' +
-        '<div class="colophon">Form GDP&#8209;1 is not a real instrument. The accounting is. Household work, unpaid care and good health have never entered national accounts; disaster, illness and imprisonment always have.<br><br>Lines from <em>Glitch in the Growth Rate</em>. Words: Kellie Peterson.</div>' +
+        '<div class="colophon">Form GDP&#8209;1 is not a real instrument. The accounting is. Household work, unpaid care and good health have never entered national accounts; disaster, illness and imprisonment always have.<br><br>Lines from <em>Glitch in the Growth Rate</em>.<br><br><a class="imprint" href="https://followkellie.github.io/">ai.ie</a></div>' +
       '</div></div>';
 
     var out = document.getElementById("result");

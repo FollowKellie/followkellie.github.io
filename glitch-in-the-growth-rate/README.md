@@ -29,9 +29,12 @@ returns nil, and tells you what you are.
 Form GDP-1 is not a real instrument. The accounting is.
 
 The closing lines are from the song *Glitch in the Growth Rate*.
-Words: Kellie Peterson.
 
 ## Licence
 
-Text and page: CC BY 4.0. Attribution to Kellie Peterson.
+Text and page: CC BY 4.0. Attribution to **ai.ie**.
 First published 2026-11-22.
+
+---
+
+**ai.ie** — https://followkellie.github.io/
