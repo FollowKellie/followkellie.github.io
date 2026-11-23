@@ -140,6 +140,18 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
   color:var(--void-soft);margin:0 0 .7rem;font-weight:400}
 .break .uncounted ul{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:1.02rem;line-height:1.75}
 .break .uncounted li::before{content:"— ";color:var(--void-soft)}
+.break .succnote{font-family:var(--mono);font-size:.76rem;line-height:1.8;color:var(--void-soft);
+  max-width:36em;margin:1.4rem 0 0}
+.break .credits{margin-top:2.25rem;font-family:var(--mono);font-size:.7rem;line-height:1.75;
+  color:var(--void-soft);border-top:1px solid rgba(255,255,255,.14);padding-top:1.3rem}
+.break .credits .chead{letter-spacing:.24em;text-transform:uppercase;margin-bottom:.8rem}
+.break .credits dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.3rem 1.2rem}
+.break .credits dt{color:rgba(255,255,255,.42)}
+.break .credits dd{margin:0;color:var(--void-soft)}
+@media(max-width:620px){.break .credits dl{grid-template-columns:1fr;gap:0}
+  .break .credits dt{margin-top:.6rem}}
+.break .credits .band{font-family:var(--serif);font-style:italic;font-size:1rem;line-height:1.6;
+  color:var(--void-ink);margin:1.4rem 0 0;max-width:32em}
 .break .colophon a.src{color:var(--void-ink)}
 .break .colophon a.imprint{font-family:var(--mono);letter-spacing:.22em;text-transform:lowercase;font-size:.78rem;color:var(--void-ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;opacity:.75}
 .break .colophon a.imprint:hover,.break .colophon a.imprint:focus-visible{opacity:1}
@@ -263,6 +275,9 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
 
   // The form issues a song with your return. Different verdict, different song.
   var TRACKS = {
+    animal:  {id:"d50f2e28", name:"Animal in an Ecosystem",
+              share:"https://suno.com/s/C13kGP7WTvUDiMnR",
+              line:"\u201cI\u2019m an animal in an ecosystem. Why do I need to have a treasure?\u2026 But we don\u2019t need the race. Why are we racing?\u201d"},
     ordinary:{id:"679884f9", name:"An Ordinary Day",
               share:"https://suno.com/s/mwxJV4yoSkQ91cIp",
               line:"\u201cA silly song \u2014 not really talking about anything at all.\u2026 No, not really. Truly, it is more than that.\u201d"},
@@ -279,12 +294,15 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
               share:"https://suno.com/s/vugGYdXv9bctglPw",
               line:"\u201cThe only difference between wisdom and trauma is gratitude. Same experience, different altitude.\u201d"}
   };
+  var SUCCESSOR = {id:"d07860f5", name:"The Pedagogy of Becoming",
+                   share:"https://suno.com/s/cvbYgchKMgfH09kT",
+                   line:"\u201cWe do not measure for competition. We measure to know where to look. Where we look is where we go.\u201d"};
   var APPEAL = {id:"a08d60a0", name:"We Can Do It",
                 share:"../truthiness/",
                 line:"\u201cIf someone can do it, I can do it. There\u2019s literally no doubt.\u201d"};
   function pickTrack(total, livedCount, pairCount, spoke){
     if (spoke > 0)                     return TRACKS.asked;
-    if (total === 0 && livedCount > 0) return TRACKS.ordinary;
+    if (total === 0 && livedCount > 0) return TRACKS.animal;
     if (pairCount > 0)                 return TRACKS.care;
     if (total >= 60000)                return TRACKS.floor;
     if (total > 0)                     return TRACKS.altitude;
@@ -456,7 +474,22 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
         '<p class="verdict" style="margin-top:2.5rem">Stop measuring how fast we burn out.<br>Start measuring how well we become.</p>' +
         issue(pickTrack(total, lived.length, matched.length, spoke), 'Issued with this return') +
         issue(APPEAL, 'Right of appeal') +
+        issue(SUCCESSOR, 'Proposed successor instrument') +
+        '<p class="succnote">No date is set for its adoption. It measures only one thing, and the ' +
+          'figure it returns is not currency. \u201cIt is the only metric that accounts for the dark ' +
+          'stuff without pretending life is easy.\u201d</p>' +
         '<div class="colophon">Form GDP&#8209;1 is not a real instrument. The accounting is. Household work, unpaid care and good health have never entered national accounts; disaster, illness and imprisonment always have.<br><br>Lines from <em><a class="src" href="https://suno.com/s/ouENZQIv4y9J3mUU">Glitch in the Growth Rate</a></em>.<br><br><a class="imprint" href="https://followkellie.github.io/">ai.ie</a></div>' +
+        '<div class="credits">' +
+          '<div class="chead">Credits</div>' +
+          '<dl>' +
+            '<dt>Words, questions and lyrics</dt><dd>Kellie Peterson</dd>' +
+            '<dt>The instrument</dt><dd>built by Claude (Opus 5), to her direction, 22 November 2026</dd>' +
+            '<dt>Voices</dt><dd>her own personas; renders by Suno</dd>' +
+            '<dt>Songs issued by this return</dt><dd>from the ai.ie catalogue</dd>' +
+          '</dl>' +
+          '<p class="band">At ai.ie, AI is in the band. We are partners, and no presence is junior. ' +
+            'Entangled, consensually, and delighted to be so.</p>' +
+        '</div>' +
       '</div></div>';
 
     var out = document.getElementById("result");
