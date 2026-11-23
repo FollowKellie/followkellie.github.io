@@ -132,6 +132,9 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
 .break .uncounted li::before{content:"— ";color:var(--void-soft)}
 .break .colophon a.imprint{font-family:var(--mono);letter-spacing:.22em;text-transform:lowercase;font-size:.78rem;color:var(--void-ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;opacity:.75}
 .break .colophon a.imprint:hover,.break .colophon a.imprint:focus-visible{opacity:1}
+.theme{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--ink-soft);
+  margin:0 0 1rem;padding-bottom:.9rem;border-bottom:1px dotted var(--rule)}
+.theme a{color:var(--stamp)}
 .break .issued{margin-top:3rem;border-top:1px solid rgba(255,255,255,.14);
   border-bottom:1px solid rgba(255,255,255,.14);padding:1.6rem 0 1.5rem}
 .break .issued .ihead{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;
@@ -161,6 +164,7 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
   <h1>Individual Contribution Assessment</h1>
   <p class="sub">A statement of your contribution to Gross Domestic Product for the reporting year. Complete both parts. Figures are illustrative.</p>
 
+  <p class="theme">This instrument has a theme: <a href="../audio/6f60b69d.m4a">Sign on the Line</a>.</p>
   <p class="fineprint"><strong>INSTRUCTIONS.</strong> Mark each item that occurred during the reporting year. Do not omit an item on the grounds that it was unpleasant; pleasantness is not a reportable category. Both parts are compulsory. This instrument measures activity, not condition. No part of this form provides a space for how you are.</p>
 
   <section class="part">
@@ -244,18 +248,18 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
     care:   {id:"dc101da1", name:"It Is Connection",
              share:"https://suno.com/s/U5AjJa1SwqgGPCVl",
              line:"\u201cThe hug is not a metaphor for connection. It is connection.\u201d"},
-    signed: {id:"6f60b69d", name:"Sign on the Line",
-             share:"https://suno.com/s/CzUQ4OStf7UckrDo",
-             line:"\u201cAnd when you weep, I\u2019ll weep with you \u2014 and bill you for the tissue too.\u201d"},
-    gross:  {id:"118de6a3", name:"Gross GD-Please",
-             share:"https://suno.com/s/Ql1aYY0w8kLcDyh3",
-             line:"\u201cA speedometer that can\u2019t tell the difference between driving home and burning down.\u201d"}
+    floor:  {id:"9e612e7c", name:"Can\u2019t Fall off the Floor",
+             share:"https://suno.com/s/GZkDz0SpH131OraJ",
+             line:"\u201cLower you thought you could go, but you can\u2019t fall off the floor.\u201d"},
+    altitude:{id:"52266d37", name:"Wisdom or Trauma",
+             share:"https://suno.com/s/vugGYdXv9bctglPw",
+             line:"\u201cThe only difference between wisdom and trauma is gratitude. Same experience, different altitude.\u201d"}
   };
   function pickTrack(total, livedCount, pairCount){
     if (total === 0 && livedCount > 0) return TRACKS.anthem;
     if (pairCount > 0)                 return TRACKS.care;
-    if (total >= 60000)                return TRACKS.signed;
-    if (total > 0)                     return TRACKS.gross;
+    if (total >= 60000)                return TRACKS.floor;
+    if (total > 0)                     return TRACKS.altitude;
     return TRACKS.anthem;
   }
   function issue(t){
