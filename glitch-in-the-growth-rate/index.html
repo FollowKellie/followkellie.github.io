@@ -238,20 +238,24 @@ button:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
 
   // The form issues a song with your return. Different verdict, different song.
   var TRACKS = {
-    anthem:  {id:"108f79a7", name:"Glitch in the Growth Rate",
-              line:"You are the song. Here it is.", share:"https://suno.com/s/ouENZQIv4y9J3mUU"},
-    care:    {share:"../truthiness/", id:"dc101da1", name:"It Is Connection",
-              line:"The thing assessed at nothing, named as the only real thing."},
-    made:    {share:"../truthiness/", id:"cc009e6f", name:"The World They Made",
-              line:"No apologies. No accountability. This is the world they made despite us."},
-    dawn:    {share:"../truthiness/", id:"9e563363", name:"Second Dawn",
-              line:"Every day grows brighter, rising up a second dawn."}
+    anthem: {id:"108f79a7", name:"Glitch in the Growth Rate",
+             share:"https://suno.com/s/ouENZQIv4y9J3mUU",
+             line:"You are the song. This is it."},
+    care:   {id:"dc101da1", name:"It Is Connection",
+             share:"https://suno.com/s/U5AjJa1SwqgGPCVl",
+             line:"\u201cThe hug is not a metaphor for connection. It is connection.\u201d"},
+    signed: {id:"6f60b69d", name:"Sign on the Line",
+             share:"https://suno.com/s/CzUQ4OStf7UckrDo",
+             line:"\u201cAnd when you weep, I\u2019ll weep with you \u2014 and bill you for the tissue too.\u201d"},
+    gross:  {id:"118de6a3", name:"Gross GD-Please",
+             share:"https://suno.com/s/Ql1aYY0w8kLcDyh3",
+             line:"\u201cA speedometer that can\u2019t tell the difference between driving home and burning down.\u201d"}
   };
   function pickTrack(total, livedCount, pairCount){
     if (total === 0 && livedCount > 0) return TRACKS.anthem;
     if (pairCount > 0)                 return TRACKS.care;
-    if (total >= 60000)                return TRACKS.made;
-    if (total > 0)                     return TRACKS.dawn;
+    if (total >= 60000)                return TRACKS.signed;
+    if (total > 0)                     return TRACKS.gross;
     return TRACKS.anthem;
   }
   function issue(t){

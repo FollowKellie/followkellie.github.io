@@ -1,0 +1,40 @@
+#!/bin/zsh
+# Files tracks downloaded from Suno into audio/ under the ids her site uses.
+# Run from anywhere. Safe to re-run; it only copies.
+set -u
+AUD="$HOME/Projects/followkellie.github.io/audio"
+mkdir -p "$AUD"
+filed=0
+
+match_id () {
+  local n="${1:l}"
+  case "$n" in
+    *glitch*growth*)                     print "108f79a7" ;;
+    *sign*on*the*line*vaudeville*|*sign*on*the*line*116*) print "6f60b69d" ;;
+    *sign*on*the*line*spatial*|*sign*on*the*line*digital*) print "dc9aa87d" ;;
+    *sign*on*the*line*)                  print "6f60b69d" ;;
+    *signed*and*prayed*)                 print "1875425a" ;;
+    *)                                   print "" ;;
+  esac
+}
+
+for f in "$HOME/Downloads"/*.(mp3|m4a|wav|flac)(Nom); do
+  base="${f:t}"
+  id="$(match_id "$base")"
+  [[ -z "$id" ]] && continue
+  ext="${f:e:l}"
+  cp "$f" "$AUD/$id.$ext"
+  print "filed  $base  ->  audio/$id.$ext"
+  filed=$((filed+1))
+done
+
+print ""
+if (( filed == 0 )); then
+  print "Nothing matched in ~/Downloads. Looking for names containing:"
+  print "  glitch ... growth / sign on the line / signed and prayed"
+else
+  print "$filed filed. Now in audio/:"
+  for id in 108f79a7 6f60b69d dc9aa87d 1875425a; do
+    for g in "$AUD/$id".*(Nom); do print "  ${g:t}  $(du -h "$g" | cut -f1)"; done
+  done
+fi
